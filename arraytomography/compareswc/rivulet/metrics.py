@@ -38,7 +38,7 @@ def precision_recall(swc1, swc2, dist1=4, dist2=4):
     swc_compare = np.vstack((swc1, swc2_fn))
     swc_compare[:, -2]  = 1
 
-    return (precision, recall, f1), swc_compare
+    return (precision, recall, f1, tp, fp, fn), swc_compare
 
 
 def upsample_swc(swc):

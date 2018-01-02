@@ -33,7 +33,7 @@ swc2 = loadswc(args.groundtruth)  # Load the ground truth
 swc2[:, 5] = 1
 
 # PRECISION + RECALL
-(precision, recall, f1), prswc = precision_recall(
+(precision, recall, f1, tp, fp, fn), prswc = precision_recall(
     swc1, swc2)  # Run precision&recall metrics
 fpath, _ = os.path.splitext(args.target)
 saveswc(fpath + '.node-compare.swc',
@@ -46,8 +46,8 @@ saveswc(fpath + '.node-compare.swc',
 # CONECTIVITY ERRORS
 midx1, midx2 = connectivity_distance(swc1, swc2, args.sigma)
 # print('Precision:\tRecall:\tF1:\tC1\tC2')
-print('%.4f\t%.4f\t%.4f\t%.4f\t%.4f' %
-      (precision, recall, f1, len(midx1), len(midx2)))
+print('%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f' %
+      (precision, recall, f1, tp, fp, fn, len(midx1), len(midx2)))
 
 for i in midx1:
     swc1[i, 1] = 2
