@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+
 import os, argparse, json
 
 from rivulet.metrics import *
@@ -48,6 +49,18 @@ midx1, midx2 = connectivity_distance(swc1, swc2, args.sigma)
 # print('Precision:\tRecall:\tF1:\tC1\tC2')
 print('%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f' %
       (precision, recall, f1, tp, fp, fn, len(midx1), len(midx2)))
+
+Total=len(swc2)
+FM=len(midx1)
+FS=len(midx2)
+
+TM=Total - FM
+
+f1conn = 2*TM / (2*TM + FM + FS)
+
+print('%.4f\t' % len(swc2))
+
+print('%.4f\t' % f1conn)
 
 for i in midx1:
     swc1[i, 1] = 2
