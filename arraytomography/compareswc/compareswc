@@ -2,8 +2,8 @@
 
 import os, argparse, json
 
-from rivulet.metrics import *
-from rivulet.io import loadswc, saveswc
+from neubua.metrics import *
+from neubua.io import loadswc, saveswc
 
 parser = argparse.ArgumentParser(
     description='Arguments for comparing two swc files.')
