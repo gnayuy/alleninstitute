@@ -50,11 +50,11 @@ midx1, midx2 = connectivity_distance(swc1, swc2, args.sigma)
 print('%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f' %
       (precision, recall, f1, tp, fp, fn, len(midx1), len(midx2)))
 
-Total=len(swc2)
+#Total=len(swc2)
 FM=len(midx1)
 FS=len(midx2)
 
-TM=Total - FM
+TM=tp - FM
 
 f1conn = 2*TM / (2*TM + FM + FS)
 
