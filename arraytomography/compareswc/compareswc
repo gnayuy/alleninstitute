@@ -45,7 +45,7 @@ saveswc(fpath + '.node-compare.swc',
 # print('G1 (FPR): %.2f\tG2 (FNR): %.2f' % (gd1.mean(), gd2.mean()))
 
 # CONECTIVITY ERRORS
-midx1, midx2 = connectivity_distance(swc1, swc2, args.sigma)
+midx1, midx2 = connectivity_distance(swc1, swc2, args.sigma, False)
 # print('Precision:\tRecall:\tF1:\tC1\tC2')
 print('%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f\t%.4f' %
       (precision, recall, f1, tp, fp, fn, len(midx1), len(midx2)))

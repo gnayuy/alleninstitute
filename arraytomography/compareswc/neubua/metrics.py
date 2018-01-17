@@ -2,7 +2,7 @@ from collections import deque
 import numpy as np
 from scipy.spatial.distance import cdist
 
-def precision_recall(swc1, swc2, dist1=4, dist2=4):
+def precision_recall(swc1, swc2, dist1=2, dist2=2):
     '''
     Calculate the precision, recall and F1 score between swc1 and swc2 (ground truth)
     It generates a new swc file with node types indicating the agreement between two input swc files
@@ -95,7 +95,7 @@ def gaussian_distance(swc1, swc2, sigma=2.):
     return M1, M2
 
 
-def connectivity_distance(swc1, swc2, sigma=2., ignore_leaf=True):
+def connectivity_distance(swc1, swc2, sigma=4., ignore_leaf=True):
     '''
     The connectivity metrics of NetMets. 
     Returns (midx1, midx2): the indices of nodes in each swc that have connection errors
@@ -117,6 +117,8 @@ def connectivity_distance(swc1, swc2, sigma=2., ignore_leaf=True):
             cnodes1[swc1[i, 0]] = i
             cnodes2[swc2[minidx1[i], 0]] = i
 
+    print(len(cnodes1))
+
     # Build Initial graphs, Edge: <id_i, id_j>: 1
     g1 = build_graph_from_swc(swc1) 
     g2 = build_graph_from_swc(swc2)
@@ -131,10 +133,14 @@ def connectivity_distance(swc1, swc2, sigma=2., ignore_leaf=True):
         for nid in g1[id]: 
             if nid in cnodes1: mid1.add(nid)
 
+    print(len(mid1))
+
     mid2 = set() 
     for id in dg2:
         for nid in g2[id]: 
             if nid in cnodes2: mid2.add(nid)
+
+    print(len(mid2))
 
     id_idx_hash1 = {}
     for i in range(swc1.shape[0]): id_idx_hash1[swc1[i, 0]] = i
@@ -144,6 +150,8 @@ def connectivity_distance(swc1, swc2, sigma=2., ignore_leaf=True):
 
     midx1 = [ int(id_idx_hash1[id]) for id in mid1 ] # Mistake coloured nodes in edges of dg1
     midx2 = [ int(id_idx_hash2[id]) for id in mid2 ] # Mistake coloured nodes in edges of dg2
+
+    print(len(midx1), len(midx2))
 
     # Filter out the midx of nodes on leaf segments
     if ignore_leaf:
