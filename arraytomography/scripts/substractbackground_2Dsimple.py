@@ -43,7 +43,7 @@ print(at_image.GetWidth(), at_image.GetHeight(), at_image.GetDepth())
 # read input label
 f = h5py.File(fn_label, "r")
 p = f.get('exported_data')
-thresh = 2*np.mean(p[:,:,1])
+thresh = 10*np.mean(p[:,:,1])
 
 print(thresh)
 

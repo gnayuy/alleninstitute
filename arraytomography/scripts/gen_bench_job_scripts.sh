@@ -57,4 +57,5 @@ write_ilastik_job_config $image $jobScriptFile
 
 echo "kill %1" >> $jobScriptFile;
 
-
+# 
+# for i in *.qsub; do [ -f ../475905865_tiffs/${i%.v3draw*}.h5 ] && echo "$i exist" || qsub $i; done
