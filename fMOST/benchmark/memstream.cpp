@@ -145,10 +145,12 @@ int main(int argc, char *argv[])
     long sz3 = spp;
     int datatype = bpp/8;
 
+    long imgsize = sz0*sz1*sz2*sz3;
+
     uint8 *img=NULL;
     try
     {
-        img = new uint8 [sz0*sz1*sz2*sz3*datatype];
+        img = new uint8 [imgsize*datatype];
     }
     catch(...)
     {
@@ -223,55 +225,59 @@ int main(int argc, char *argv[])
         tilenum_width  = (sz0 % tilewidth) ? (sz0 / tilewidth) + 1 : sz0 / tilewidth;
         tilenum_length = (sz1 % tilelength) ? (sz1 / tilelength) + 1 : sz1 / tilelength;
 
-        unsigned char *data = NULL;
-        try
-        {
-            data = new unsigned char[tilesize];
-        }
-        catch(...)
-        {
-            cout<<"fail to alloc memory"<<endl;
-            return -1;
-        }
+//        unsigned char *data = NULL;
+//        try
+//        {
+//            data = new unsigned char[tilesize];
+//        }
+//        catch(...)
+//        {
+//            cout<<"fail to alloc memory"<<endl;
+//            return -1;
+//        }
 
         stride_src = tilewidth * spp; // width of tile (in bytes)
         stride_dst = sz0 * spp; // width of subregion (in bytes)
 
         page = 0;
-        do {
-
-            psrc = ((unsigned char *)data);
+        do
+        {
+            //psrc = ((unsigned char *)data);
             pdst = img; // the buffer has the size of the subregion
             len = tilelength;
             tile = TIFFComputeTile(mem_TIFF,0,0,0,0); // index of the first tile to be copied in the current row of tiles
-            for ( i=0; i<sz1; ) {
+            for ( i=0; i<sz1; )
+            {
                 width = tilewidth;
-                for ( j=0; j<sz0; ) {
-                    TIFFReadEncodedTile(mem_TIFF,tile,data,(tsize_t) -1); // read tile into tile buffer
-                    copydata (psrc,stride_src,pdst,stride_dst,(width * spp),len); // copy the block
+                for ( j=0; j<sz0; )
+                {
+                    TIFFReadEncodedTile(mem_TIFF,tile,pdst,(tsize_t) -1); // read tile into tile buffer
+                    //copydata (psrc,stride_src,pdst,stride_dst,(width * spp),len); // copy the block
                     j += width;
                     tile++; // index of the next tile in the same row of tiles
-                    psrc = ((unsigned char *)data) + ((i % tilelength)*tilewidth) * spp; // the block in the next tile begins just after (i % tilelength) rows
+                    //psrc = ((unsigned char *)data) + ((i % tilelength)*tilewidth) * spp; // the block in the next tile begins just after (i % tilelength) rows
                     pdst += width * spp; // the block in the image buffer move forward of width pixels
                     width = (((tile%tilenum_width) + 1) * tilewidth <= sz0) ? tilewidth : (sz0%tilewidth); // if the next tile in the row is all within the subregion, width is tilewidth otherwise it is shorter
                 }
                 i += len;
                 tile = TIFFComputeTile(mem_TIFF,0,i,0,0); // index of the first tile to be copied in the current row of tiles
-                psrc = ((unsigned char *)data) + ((i % tilelength)*tilewidth)*spp; // in the first tile of the next row of tiles skip (i % tilelength) rows plus (startj % tilewidth) pixels
+                //psrc = ((unsigned char *)data) + ((i % tilelength)*tilewidth)*spp; // in the first tile of the next row of tiles skip (i % tilelength) rows plus (startj % tilewidth) pixels
                 pdst = img + (i * stride_dst); // the block in the image buffer begin after (i-starti) rows
                 len = (((tile/tilenum_width) + 1) * tilelength <= sz1) ? tilelength : (sz1%tilelength); // if the next row of tiles is all within the subregion, len is tilelength otherwise it is shorter
             }
 
             page++;
 
+            cout<<"page "<<page<<endl;
+
         }
         while ( page < 1 && TIFFReadDirectory(mem_TIFF));
 
         //
-        if(data)
-        {
-            delete []data;
-        }
+//        if(data)
+//        {
+//            delete []data;
+//        }
 
     }
     else if(TIFFGetField(mem_TIFF, TIFFTAG_ROWSPERSTRIP, &rps))
@@ -313,6 +319,23 @@ int main(int argc, char *argv[])
 
     //
     cout << timer.elapsedMs() << "ms" <<endl;
+
+
+    //
+    long n=0;
+    for(long i=0; i<imgsize; i++)
+    {
+        if(datatype==2)
+        {
+            uint16 *p = (uint16 *)img;
+
+            if(p[i])
+                n++;
+        }
+    }
+    cout<<"non-zero voxels "<<n<<endl;
+
+
 
     //
     if(img)
