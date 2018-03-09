@@ -62,7 +62,7 @@ int rawwrite(char *fileNameToWrite, unsigned char *buf, long size, int datatype)
         else if(datatype==2)
         {
             uint16 *bufp = (uint16*)buf;
-            //copy(bufp, bufp+size, ostream_iterator<unsigned short>(fout, ""));
+            //copy(bufp, bufp+size, ostream_iterator<uint16>(fout, ""));
 
             for(long i=0; i<size; i++)
             {
@@ -330,20 +330,35 @@ int main(int argc, char *argv[])
                     }
                 }
 
-                if (comp==1)
+                tstrip_t s;
+                //#pragma omp parallel for default(shared) private(mem_TIFF, img)
+                for (s = 0; s < ns; s++)
                 {
-                    for (tstrip_t s = 0; s < ns; s++)
+                    if (TIFFReadEncodedStrip(mem_TIFF, s, img + s*stripsize, stripsize)<0)
                     {
-                        TIFFReadRawStrip(mem_TIFF, s, img + s*stripsize, stripsize);
+                        TIFFError(TIFFFileName(mem_TIFF), "Error, can't read strip %lu", (unsigned long) s);
                     }
                 }
-                else
-                {
-                    for (tstrip_t s = 0; s < ns; s++)
-                    {
-                        TIFFReadEncodedStrip(mem_TIFF, s, img + s*stripsize, stripsize);
-                    }
-                }
+
+
+//                if (comp==1)
+//                {
+//                    tstrip_t s;
+//                    #pragma omp parallel for default(shared) private(mem_TIFF, img)
+//                    for (s = 0; s < ns; s++)
+//                    {
+//                        TIFFReadRawStrip(mem_TIFF, s, img + s*stripsize, stripsize);
+//                    }
+//                }
+//                else
+//                {
+//                    tstrip_t s;
+//                    #pragma omp parallel for default(shared) private(mem_TIFF, img)
+//                    for (tstrip_t s = 0; s < ns; s++)
+//                    {
+//                        TIFFReadEncodedStrip(mem_TIFF, s, img + s*stripsize, stripsize);
+//                    }
+//                }
 
 
 
