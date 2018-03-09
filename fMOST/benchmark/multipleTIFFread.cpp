@@ -115,19 +115,19 @@ int rawwrite(char *fileNameToWrite, unsigned char *buf, long size, int datatype)
 }
 
 
-int tiffread(istream *dataStreamInMemory, unsigned char *&img, long &sz0, long &sz1, long &sz2, long &sz3, int &datatype)
+int tiffread(stringstream *dataStreamInMemory, unsigned char *&img, long &sz0, long &sz1, long &sz2, long &sz3, int &datatype)
 {
-    cout<<"call tiffread"<<endl;
+    cout<<"call tiffread read stream "<<&dataStreamInMemory<<endl;
 
-    dataStreamInMemory->seekg (0, dataStreamInMemory->end);
-    int len = dataStreamInMemory->tellg();
+//    dataStreamInMemory->seekg (0, dataStreamInMemory->end);
+//    int len = dataStreamInMemory->tellg();
 
-    cout<<"length of istream "<<len<<endl;
+//    cout<<"length of istream "<<len<<endl;
 
-    if(len<0)
-        return -1;
+//    if(len<0)
+//        return -1;
 
-    dataStreamInMemory->seekg (0, dataStreamInMemory->beg);
+//    dataStreamInMemory->seekg (0, dataStreamInMemory->beg);
 
     //
     uint16 spp, bpp, orientation, photo, comp, planar_config;
@@ -139,7 +139,7 @@ int tiffread(istream *dataStreamInMemory, unsigned char *&img, long &sz0, long &
     uint32 rps;
 
     //
-    TIFF* mem_TIFF = TIFFStreamOpen("MemTIFF", dataStreamInMemory);
+    TIFF* mem_TIFF = TIFFStreamOpen("MemTIFF", (istream *)dataStreamInMemory);
 
     cout<<"sucess open"<<endl;
 
@@ -354,11 +354,18 @@ int main(int argc, char *argv[])
 
     // load TIFFs into memory
     int i;
-    vector<stringstream> dataInMemory;
+    vector<stringstream*> dataInMemory;
     vector<unsigned char*> imgList;
 
     for(i=0; i<nFiles; i++)
     {
+        dataInMemory.push_back(new stringstream);
+    }
+
+    for(i=0; i<nFiles; i++)
+    {
+        cout<<"load "<<fileList[i]<<endl;
+
         ifstream inFile;
         inFile.open(fileList[i]);
         if (!inFile) {
@@ -366,14 +373,8 @@ int main(int argc, char *argv[])
             return -1;
         }
 
-        stringstream input_TIFF_stream;
-        input_TIFF_stream << inFile.rdbuf();
-
-        dataInMemory.push_back(input_TIFF_stream);
-
-//        istream& input_TIFF = input_TIFF_stream;
-
-//        dataInMemory.push_back(&input_TIFF);
+        dataInMemory.push_back(new stringstream);
+        *dataInMemory[i] << inFile.rdbuf();
 
         //
         inFile.close();
@@ -388,31 +389,15 @@ int main(int argc, char *argv[])
     timer.update();
 
     // read TIFFs from the memory
-    //#pragma omp parallel
+    #pragma omp parallel
     {
-        //#pragma omp for
+        #pragma omp for
         for(i=0; i<nFiles; i++)
         {
             long sz0, sz1, sz2, sz3;
             int datatype;
 
-            istream& input_TIFF = dataInMemory[i];
-
-
-
-            input_TIFF.seekg (0, input_TIFF.end);
-            int len = input_TIFF.tellg();
-
-            cout<<"checking length of istream "<<len<<endl;
-
-            if(len<0)
-                return -1;
-
-            input_TIFF.seekg (0, input_TIFF.beg);
-
-
-
-            tiffread(&input_TIFF,imgList[i],sz0,sz1,sz2,sz3,datatype);
+            tiffread(dataInMemory[i],imgList[i],sz0,sz1,sz2,sz3,datatype);
         }
     }
     cout << "read TIFF image from the memory cost "<< timer.elapsedMs() << "ms" <<endl;
