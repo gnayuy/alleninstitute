@@ -7,6 +7,8 @@ OSWC=$2
 
 SCALE=$3
 
+OFFSET=$4
+
 SR=`echo print 1.0 / $SCALE | python`
 
 #
@@ -29,6 +31,10 @@ Y=${str[3]}
 Z=${str[4]}
 RADIUS=${str[5]}
 PN=${str[6]}
+
+#X=`echo "$X - $OFFSET" | bc`
+#Y=`echo "$Y - $OFFSET" | bc`
+Z=`echo "$Z - $OFFSET" | bc`
 
 X=`echo "$X * $SR" | bc`
 Y=`echo "$Y * $SR" | bc`
