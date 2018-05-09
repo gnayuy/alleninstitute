@@ -38,4 +38,4 @@ swc2[:, 5] = 1
 
 d = cdist(swc1[:, 2:5], swc2[:, 2:5])
 
-print(np.mean(d.min(axis=1)), np.std(d.min(axis=1)))
+print("%s, %s" % (np.mean(d.min(axis=1)), np.std(d.min(axis=1))))

@@ -57,7 +57,7 @@ fi
 
 if((n==2))
 then
-echo "$num, $score, $ascore, $dscore"
+echo "$num, $score, $ascore, $dscore,"
 fi
 
 
