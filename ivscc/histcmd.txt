@@ -1,0 +1,2000 @@
+  282  cd
+  283  cd fmost-data/test_yang/data/
+  284  ls
+  285  gedit log1.txt 
+  286  ls data2d
+  287  cd ..
+  288  ls
+  289  ls ssd
+  290  ls -l
+  291  ls ssd
+  292  more '/home/yangy/work/convertedasc/left_brain_73_part48_sorted.asc' 
+  293  ls
+  294  cd
+  295  ls
+  296  du -sh ~
+  297  ls tmp
+  298  ls
+  299  rm -rf tmp/
+  300  ls
+  301  ls Downloads/
+  302  du -sh Downloads/
+  303  ls ~/work/
+  304  mv Downloads/* ~/work/Downloads/
+  305  ls
+  306  rm convertedasc.zip 
+  307  ls
+  308  ls Documents/
+  309  ls Downloads/
+  310  ls Desktop/
+  311  rm Desktop/Screenshot.png 
+  312  ls
+  313  ls Music/
+  314  ls Public
+  315  ls
+  316  ls Music
+  317  ls Qt
+  318  ls -lath Qt
+  319  du -sh Qt
+  320  du -sh Tools
+  321  ls
+  322  du -sh tools/
+  323  ls tools/
+  324  du -sh tools/*
+  325  ls
+  326  rm ilastik_log.txt 
+  327  more histcmd.txt 
+  328  ls
+  329  ls tools/
+  330  mv histcmd.txt tools/
+  331  ls
+  332  ls Qt
+  333  ls Qt/tools
+  334  ls Qt/Tools/
+  335  ls Qt/Tools/QtCreator/
+  336  ls Qt/Tools/QtCreator/bin/
+  337  ls fmost-data/
+  338  ls fmost-data/fMOST_terafly/
+  339  ls fmost-data/fMOST_terafly/mouseID_362952-17304/
+  340  du -sh fmost-data/fMOST_terafly/mouseID_362952-17304/
+  341  ls fmost-data/fMOST_terafly/mouseID_362952-17304/
+  342  du -sh fmost-data/fMOST_terafly/mouseID_362952-17304/
+  343  du -sh fmost-data/fMOST_terafly/mouseID_362952-17304/*
+  344  cd
+  345  cd work/tools/BIConverter/
+  346  ls
+  347  which gcc
+  348  more usingNewGCC.profile 
+  349  source usingNewGCC.profile 
+  350  which gcc
+  351  ls
+  352  pwd
+  353  ls
+  354  git pull
+  355  make -j8
+  356  make clean
+  357  cd build/
+  358  make -j8
+  359  which gcc
+  360  ccmake ..
+  361  make clean
+  362  make -j8
+  363  reset
+  364  time src/biconverter -i /local4/data/slice16 -o test16 -n3
+  365  time src/biconverter -i /local4/data/slice16 -o test16 -n 3 
+  366  time bigimageexpress -i /local4/data/slice16 -o test16_1 -n 3 
+  367  ls
+  368  du -sh test16
+  369  du -sh test16_1
+  370  ls -lath test16/*/*/*.tif | wc
+  371  ls test16/*/*/*.tif | wc
+  372  ls test16/*/*/
+  373  ls test16/*/*/*.tif
+  374  ls test16/*/*/*
+  375  ls test16/*/*/* | wc
+  376  ls test16_1/*/*/* | wc
+  377  diff src/biconverter ~/work/local/bin/bigimageexpress 
+  378  diff test16 test16_1
+  379  cd ..
+  380  git diff
+  381  git add -u
+  382  git commit -m "update"
+  383  git push
+  384  cd build
+  385  make -j8
+  386  ccmake ..
+  387  make -j8
+  388  cd ..
+  389  ls
+  390  cd ..
+  391  git clone https://github.com/gnayuy/BigTree.git
+  392  cd BigTree/
+  393  git add *
+  394  git add -u
+  395  git commit -m "add BigTree source code version 1.0"
+  396  git push
+  397  mkdir build
+  398  cd build
+  399  ccmake ..
+  400  make -j8
+  401  ccmake ..
+  402  make -j8
+  403  ccmake ..
+  404  make -j8
+  405  ls
+  406  ls src/BigTree 
+  407  ./src/BigTree -h
+  408  ./src/BigTree --help
+  409  ./src/BigTree -h
+  410  which gcc
+  411  ccmake ..
+  412  make -j8
+  413  ccmake ..
+  414  make clean
+  415  make -j8
+  416  make
+  417  ccmake ..
+  418  make -j8
+  419  cd ..
+  420  mkdir build1
+  421  cd build1
+  422  ccmake ..
+  423  make -j8
+  424  git add -u
+  425  git commit -m "make change of CMake file to find tiffxx library"
+  426  git push
+  427  cd ..
+  428  mv build1 build
+  429  cd build/
+  430  ls
+  431  ls ..
+  432  cd ..
+  433  git diff
+  434  git checkout -b GPU
+  435  gi
+  436  git diff
+  437  git add -u
+  438  git commit -m "change the way to check if an array is zero"
+  439  git push
+  440  cp ../CUDA-LZWdecompression/src/cudalzwdecompkernel.cuh 3rdparty/
+  441  cp ../CUDA-LZWdecompression/src/culzwdecomp.cu 3rdparty/
+  442  make -j8
+  443  cd build/
+  444  make -j8
+  445  ccmake ..
+  446  ccmake -DCMAKE_CUDA_FLAGS=”-arch=sm_60” ..
+  447  ccmake -DCMAKE_CUDA_FLAGS=”-arch=sm_62” ..
+  448  ccmake -DCMAKE_CUDA_FLAGS=”-arch=sm_52” ..
+  449  ccmake -DCMAKE_CUDA_FLAGS=”-arch=sm_52\ sm_62” ..
+  450  ccmake -DCMAKE_CUDA_FLAGS=”-arch=sm_37” ..
+  451  ccmake -DCMAKE_CUDA_FLAGS=”-arch=sm_50” ..
+  452  ccmake ..
+  453  cd ..
+  454  mkdir buildgpu
+  455  cd buildgpu
+  456  ccmake ..
+  457  cd ..
+  458  rm -rf buildgpu/
+  459  cd ..
+  460  git diff
+  461  git add -u
+  462  git commit -m "add gpu branch"
+  463  git push
+  464  git diff
+  465  git add 3rdparty/culzwdecomp.cu 
+  466  git add 3rdparty/cudalzwdecompkernel.cuh 
+  467  git add -u
+  468  git commit -m "add cuda sources"
+  469  git push
+  470  git diff
+  471  git push
+  472  git pull
+  473  git diff
+  474  git add 3rdparty/culzwdecomp.cu 
+  475  git add 3rdparty/cudalzwdecompkernel.cuh 
+  476  git commit -m "add cuda sources"
+  477  ls
+  478  cd buildgpu
+  479  ls
+  480  make
+  481  which nvcc
+  482  make -j8
+  483  make
+  484  ccmake ..
+  485  make -j8
+  486  ccmake ..
+  487  make
+  488  cp ../src/main.cpp ../src/main.cu
+  489  ccmake ..
+  490  make
+  491  ls
+  492  ls src/BigTree 
+  493  ls
+  494  ls /local4/data/slice4/
+  495  time src/BigTree /local4/data/slice4 test 3
+  496  ls test
+  497  ls test/*
+  498  make -j8
+  499  rm -rf test
+  500  time src/BigTree /local4/data/slice4 test 3
+  501  ls test/*
+  502  make -j8
+  503  time src/BigTree /local4/data/slice4 test1 3
+  504  ln -s ~/fmost-data/fMOST_raw_data/mouseID_321237-17302/green/montage/test_05000_mon.tif ./
+  505  ls
+  506  ln -s ~/fmost-data/fMOST_raw_data/mouseID_321237-17302/green/montage/test_05500_mon.tif ./
+  507  ls /data/mat/yang/
+  508  ls /data/mat/cluster
+  509  ls ~/deploy.profile
+  510  find ~ deploy.profile
+  511  ls
+  512  tiffdump test_05500_mon_ds.tif
+  513  tiffdump test_05500_mon.tif
+  514  ls -lath
+  515  tiffcp --help
+  516  tiffcp -c lzw test_05500_mon_ds.tif imageslice_lzw.tif
+  517  ls -lath 
+  518  ifconfig
+  519  pwd
+  520  which nvcc
+  521  ldd ~/work/cuda/bin/nvcc
+  522  cd ..
+  523  ls
+  524  git clone https://github.com/funasaka/CUDA-LZWdecompression.git 
+  525  git clone https://github.com/funasaka/ALL.git
+  526  ls
+  527  cd CUDA-LZWdecompression/
+  528  ls
+  529  gedit Makefile 
+  530  cd src
+  531  ls
+  532  gedit Makefile 
+  533  nvcc --version
+  534  make
+  535  ls
+  536  ls ..
+  537  cd ..
+  538  ls
+  539  ldd libcld.so 
+  540  make
+  541  ls
+  542  ./sample 
+  543  ls
+  544  ls image/
+  545  ls -lath image/
+  546  gedit sample.cu
+  547  ls src
+  548  ls
+  549  make
+  550  ls
+  551  ./sample /local4/data/slice4/test_06550_mon.tif 
+  552  ./sample /local4/biconversion/mouse17304/test_00010_mon.tif 
+  553  ./sample /local4/biconversion/mouse17304/test_00020_mon.tif 
+  554  ./sample /local4/biconversion/mouse17304/test_05550_mon.tif 
+  555  ./sample /local4/biconversion/mouse17304/test_06550_mon.tif 
+  556  ls
+  557  gedit src/readtiff.h 
+  558  ls
+  559  make
+  560  ./sample /local4/biconversion/mouse17304/test_06550_mon.tif 
+  561  ./sample /local4/biconversion/mouse17304/test_06551_mon.tif 
+  562  ./sample /local4/biconversion/mouse17304/test_06552_mon.tif 
+  563  ./sample /local4/biconversion/mouse17304/test_07777_mon.tif 
+  564  which nail
+  565  ls ~/work/tools/nail/build/
+  566  ls ~/work/tools/nail/build/src
+  567  ls ~/work/tools/nail/build/src/nail
+  568  cat /etc/sysconfig/network-scripts/ifcfg-eth0
+  569  ifconfig
+  570  cat /etc/sysconfig/network-scripts/ifcfg-eth4
+  571  ls
+  572  history >> hiscmd.txt
+  573  tail hiscmd.txt 
+  574  gedit hiscmd.txt 
+  575  ls
+  576  make
+  577  nvcc -o sample sample.cu -O2 -L./ -lcld -ltiff
+  578  nvcc -o sample sample.cu -O2 -I/home/yangy/work/local/include -L./ -lcld -ltiff
+  579  ls
+  580  nvcc -o sample sample.cu -O2 -I/home/yangy/work/local/include -L./ -lcld -ltiff
+  581  time ./sample /local4/data/slice4/test_06550_mon.tif ./test_06550_raw.tif
+  582  ls
+  583  ls -lath
+  584  cd ..
+  585  git diff
+  586  gi
+  587  git add -u
+  588  git commit -m "update file organization"
+  589  git push
+  590  git diff
+  591  git log
+  592  git checkout master
+  593  gi
+  594  git log
+  595  git checkout gpu
+  596  git log
+  597  git diff
+  598  gi
+  599  git checkout GPU
+  600  git log
+  601  gi
+  602  ls
+  603  cd ..
+  604  cp -r BigTree/ bigtreegpu
+  605  cd BigTree/
+  606  gi
+  607  git pull
+  608  git diff
+  609  git pull
+  610  git log
+  611  git add -u
+  612  git commit -m "test"
+  613  git push
+  614  git diff
+  615  git pull
+  616  git branch --set-upstream-to=origin/GPU
+  617  git branch -b GPU
+  618  git checkout -b GPU
+  619  git diff
+  620  git push
+  621  git diff
+  622  git log
+  623  git diff
+  624  ls
+  625  git checkout GPU
+  626  gi
+  627  git push origin GPU
+  628  git branch
+  629  gi
+  630  git add -u
+  631  git commit -m "improved with GPU lzw decompression version 1.0"
+  632  git push
+  633  git diff
+  634  git add -u
+  635  git commit -m "cuda lzw compression only works for 8-bit grayscale images for now"
+  636  git push
+  637  git pull
+  638  git diff
+  639  cat /etc/network/interfaces
+  640  ls /etc/network/
+  641  ls /etc/
+  642  ls /etc/networks 
+  643  ls /etc/networks/
+  644  ls /etc/sysconfig/
+  645  ls /etc/sysconfig/networking
+  646  ls /etc/sysconfig/networking/devices/
+  647  ls /etc/sysconfig/networking/profiles/
+  648  ls /etc/sysconfig/networking/profiles/default/
+  649  ls /etc/sysconfig/network-scripts/
+  650  '
+  651  git pull
+  652  git checkout master
+  653  git pull
+  654  git checkout GPU
+  655  git pull
+  656  git diff
+  657  ls
+  658  cd
+  659  cd work/
+  660  ls
+  661  cd tools/
+  662  ls
+  663  ls ~/fmost-data/fMOST_raw_data/
+  664  ls ~/fmost-data/fMOST_raw_data/mouseID_321244-17545/green/montage/test_106*
+  665  ls ~/fmost-data/fMOST_raw_data/mouseID_321244-17545/green/montage/test_107*
+  666  ls ~/fmost-data/fMOST_raw_data/mouseID_321244-17545/green/montage/test_11*
+  667  ls ~/fmost-data/fMOST_raw_data/mouseID_321244-17545/green/montage/test_109*
+  668  ls ~/fmost-data/fMOST_raw_data/mouseID_321244-17545/green/montage/test_108*
+  669  top
+  670  pwd
+  671  cd
+  672  cd fmost-data/
+  673  ls
+  674  cd fMOST_terafly/
+  675  ls
+  676  ls mouseID17545/
+  677  ls
+  678  ls mouseID17545/
+  679  ls mouseID17545/*
+  680  ls mouseID17545/* | wc
+  681  ls /local4/biconversion/mouseID17545/RES\(54600x35989x10750\)/* | wc
+  682  du -sh /local4/biconversion/mouseID17545
+  683  cat /proc/mounts
+  684  findmnt
+  685  ssh fmost-data
+  686  cd
+  687  cd work/tools/v3d_external
+  688  bin/vaa3d
+  689  findmnt
+  690  ls /local3
+  691  df -h
+  692  umount /local3
+  693  sudo umount /local3
+  694  umount -h
+  695  sudo umount -f /local3
+  696  top
+  697  ls
+  698  sudo umount /local3
+  699  sudo umount -l /local3
+  700  sudo umount -f /local3
+  701  ls /local3
+  702  findmnt
+  703  ls
+  704  cd tools/
+  705  ls
+  706  cd imagecheck/
+  707  ls
+  708  more imagecheck.sh
+  709  nohup time sh imagecheck.sh ~/fmost-data/fMOST_raw_data/mouseID_362952-17304/green/montage images17304.txt &
+  710  top
+  711  ls
+  712  ls ..
+  713  ls ../v3d
+  714  ls ../v3d/green
+  715  cd
+  716  cd fmost-data/
+  717  ls
+  718  cd test_yang
+  719  ls
+  720  ls data
+  721  ls data/slice2556
+  722  ls data/slice256/
+  723  top
+  724  ifconfig
+  725  ping fmost-data
+  726  cat /etc/hosts
+  727  cat /etc/named.conf
+  728  cat /etc/resolv.conf
+  729  ping google.com
+  730  ping corp.alleninstitute.org
+  731  sudo ifup eth4
+  732  ifconfig
+  733  ifconfig[5~
+  734  ping 10.128.1.109
+  735  nmcli dev show
+  736  nm-tool | grep DNS
+  737  nslookup google.com
+  738  systemd-resolve --status
+  739  service named start
+  740  sudo service named start
+  741  sudo service named status
+  742  cat /etc/named.conf
+  743  ping google.com
+  744  ls /home/
+  745  ls
+  746  ls ~/.mozilla/
+  747  rm -rf ~/.mozilla/
+  748  ls ~/.ICEauthority
+  749  rm ~/.ICEauthority
+  750  ls ~/.ICEauthorit
+  751  rm ~/.ICEauthority
+  752  ls ~/.ICEauthority
+  753  touch ~/.ICEauthority
+  754  ls ~/.ICEauthority
+  755  cat ~/.ICEauthority
+  756  ls /etc/named.conf
+  757  ls /etc/named
+  758  logout
+  759  df -h
+  760  ifconfig
+  761  ping 10.192.1.109
+  762  ping 192.168.1.109
+  763  ls
+  764  pwd
+  765  ls
+  766  ls -lath /etc/sysconfig/network-scripts/
+  767  cat /etc/sysconfig/network-scripts/ifcfg-eth5
+  768  cat ~/.ICEauthority
+  769  diff .ICEauthority .ICEauthority_bk 
+  770  ifconfig
+  771  ping 192.168.1.109
+  772  sudo ifdown eth4
+  773  sudo ifup eth4
+  774  ping 192.168.1.101
+  775  ping 192.168.1.109
+  776  ping 192.168.1.108
+  777  cat /etc/sysconfig/network-scripts/ifcfg-eth4
+  778  ping 192.168.
+  779  ping 192.168.1.108
+  780  ifconfig
+  781  sudo ifup eth5
+  782  sudo cp /etc/sysconfig/network-scripts/ifcfg-eth4 /etc/sysconfig/network-scripts/ifcfg-eth0
+  783  sudo vim /etc/sysconfig/network-scripts/ifcfg-eth0
+  784  sudo ifup eth0
+  785  ifconfig
+  786  sudo ifdown eth0
+  787  ls
+  788  ifconfig
+  789  sudo rm /etc/sysconfig/network-scripts/ifcfg-eth0
+  790  ls /etc/sysconfig/network-scripts/
+  791  sudo ifdown eth5
+  792  sudo ifdown eth4
+  793  sudo ifup eth4
+  794  ping 192.168.1.108
+  795  df -h
+  796  sudo mount -t nfs 192.168.1.108:/public /local4
+  797  ls /local4
+  798  ls /local3
+  799  cd /local3
+  800  ls
+  801  ls maxconversion/
+  802  ls teraconverter2/
+  803  ls /local4
+  804  ls /local4/bk_ssd/
+  805  rm -rf teraconverter2/
+  806  sudo rm -rf teraconverter2/
+  807  ls
+  808  df -h
+  809  ls /local4/biconversion/mouseID17545/
+  810  nohup cp -r /local4/biconversion/mouseID17545/ maxconversion/ &
+  811  ls
+  812  ls maxconversion/
+  813  ls maxconversion/mouseID17545/
+  814  ls maxconversion/mouseID17545/RES\(54600x35989x10750\)/
+  815  date
+  816  ls maxconversion/mouseID17545/RES\(54600x35989x10750\)/
+  817  ls maxconversion/mouseID17545/RES\(54600x35989x10750\)/ | wc
+  818  su
+  819  history
+  820  logout
+  821  exit
+  822  su
+  823  history
+  824  exit
+  825  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/078080/078080_000000/078080_000000_-1.53155e+11.tif
+  826  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/078080/078080_072000/078080_072000_-1.53155e+11.tif
+  827  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/078080/078080_288000/078080_288000_-1.53155e+11.tif
+  828  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/078080/078080_216000/078080_216000_-1.53155e+11.tif
+  829  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/078080/078080_144000/078080_144000_-1.53155e+11.tif
+  830  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/312320/312320_144000/312320_144000_-1.53155e+11.tif
+  831  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/312320/312320_216000/312320_216000_-1.53155e+11.tif
+  832  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/312320/312320_288000/312320_288000_-1.53155e+11.tif
+  833  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/312320/312320_072000/312320_072000_-1.53155e+11.tif
+  834  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/312320/312320_000000/312320_000000_-1.53155e+11.tif
+  835  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/156160/156160_288000/156160_288000_-1.53155e+11.tif
+  836  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/156160/156160_216000/156160_216000_-1.53155e+11.tif
+  837  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/156160/156160_000000/156160_000000_-1.53155e+11.tif
+  838  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/156160/156160_072000/156160_072000_-1.53155e+11.tif
+  839  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/156160/156160_144000/156160_144000_-1.53155e+11.tif
+  840  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/468160/468160_288000/468160_288000_-1.53155e+11.tif
+  841  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/468160/468160_216000/468160_216000_-1.53155e+11.tif
+  842  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/468160/468160_072000/468160_072000_-1.53155e+11.tif
+  843  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/468160/468160_000000/468160_000000_-1.53155e+11.tif
+  844  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/468160/468160_144000/468160_144000_-1.53155e+11.tif
+  845  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/390400/390400_072000/390400_072000_-1.53155e+11.tif
+  846  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/390400/390400_288000/390400_288000_-1.53155e+11.tif
+  847  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/390400/390400_000000/390400_000000_-1.53155e+11.tif
+  848  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/390400/390400_144000/390400_144000_-1.53155e+11.tif
+  849  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/390400/390400_216000/390400_216000_-1.53155e+11.tif
+  850  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/000000/000000_216000/000000_216000_-1.53155e+11.tif
+  851  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/000000/000000_144000/000000_144000_-1.53155e+11.tif
+  852  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/000000/000000_288000/000000_288000_-1.53155e+11.tif
+  853  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/234240/234240_288000/234240_288000_-1.53155e+11.tif
+  854  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/234240/234240_144000/234240_144000_-1.53155e+11.tif
+  855  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/234240/234240_072000/234240_072000_-1.53155e+11.tif
+  856  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/234240/234240_216000/234240_216000_-1.53155e+11.tif
+  857  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/234240/234240_000000/234240_000000_-1.53155e+11.tif
+  858  gedit questionalfiles.txt
+  859  while read line; do ls ~/fmost-data/fMOST_terafly$line; done
+  860  while read line; do echo ~/fmost-data/fMOST_terafly$line; done
+  861  while read line; do echo ~/fmost-data/fMOST_terafly$line; done < questionalfiles.txt 
+  862  while read line; do ls ~/fmost-data/fMOST_terafly$line; done < questionalfiles.txt 
+  863  while read line; do echo ~/fmost-data/fMOST_terafly$line; done < questionalfiles.txt 
+  864  while read line; do ls ~/fmost-data/fMOST_terafly$line; done < questionalfiles.txt 
+  865  while read line; do rm ~/fmost-data/fMOST_terafly$line; done < questionalfiles.txt 
+  866  while read line; do ls ~/fmost-data/fMOST_terafly$line; done < questionalfiles.txt 
+  867  rm -rf '/home/yangy/fmost-data/fMOST_terafly/mouseID_321244-17545' 
+  868  mv '/home/yangy/fmost-data/fMOST_terafly/mouseID17545' '/home/yangy/fmost-data/fMOST_terafly/mouseID_321244-17545' 
+  869  cd 
+  870  cd fmost-data 
+  871  ls
+  872  grep sshfs tools/histcmd.txt 
+  873  sudo sshfs -o allow_other yangy@fmost-data:/local2 /local2
+  874  ls
+  875  cd fmost-data/
+  876  ls
+  877  cd fMOST_terafly/
+  878  ls
+  879  du -sh mouseID17545/
+  880  ls mouseID17545/
+  881  ls mouseID17545/RES\(54600x35989x10750\)/
+  882  ls mouseID17545/RES\(54600x35989x10750\)/ | wc
+  883  su
+  884  ls mouseID17545/RES\(54600x35989x10750\)/ | wc
+  885  ls mouseID17545/
+  886  ls mouseID17545/RES\(54600x35989x10750\)
+  887  ls -lath mouseID17545/RES\(54600x35989x10750\)
+  888  ls -lath mouseID17545/RES\(54600x35989x10750\)/362400
+  889  ls -lath mouseID17545/
+  890  ls -lath 
+  891  ls -lath mouseID17545/
+  892  ls -lath mouseID17545/* | wc
+  893  for i in mouseID17545/*; do ls $i/ | wc ; done
+  894  for i in mouseID17545/*; do ls -lath $i ; done
+  895  cd 
+  896  cd /local4
+  897  ls
+  898  cd biconversion/
+  899  ls
+  900  cd mouseID17545/
+  901  ls
+  902  ls */* | wc
+  903  ls RES\(54600x35989x10750\)/ | wc
+  904  ls RES\(27300x17994x5375\)/ | wc
+  905  ls * | wc
+  906  ls
+  907  for i in *; do ls * | wc; done
+  908  for i in *; do ls $i | wc; done
+  909  cd
+  910  cd /local3
+  911  ls
+  912  cd maxconversion/
+  913  ls
+  914  ls mouseID17545/RES\(54600x35989x10750\)/ | wc
+  915  ls mouseID17545
+  916  ls mouseID17545/RES\(54600x35989x10750\)/ | wc
+  917  pwd
+  918  ls /local4/biconversion/mouseID17545/RES\(54600x35989x10750\)/ | wc
+  919  ls mouseID17545/RES\(54600x35989x10750\)/ | wc
+  920  ls mouseID17545/
+  921  ls mouseID17545/RES\(27300x17994x5375\)/ | wc
+  922  which lz4
+  923  ls mouseID17545/RES\(27300x17994x5375\)/ | wc
+  924  date
+  925  ls mouseID17545/RES\(27300x17994x5375\)/ | wc
+  926  date
+  927  ls mouseID17545/RES\(27300x17994x5375\)/ | wc
+  928  ls mouseID17545/
+  929  for i in *; do ls $i | wc; done
+  930  for i in *; do ls $i/* | wc; done
+  931  for i in */*; do ls $i | wc; done
+  932  top
+  933  ls
+  934  ls mouseID17545/
+  935  pwd
+  936  ls -lath
+  937  for i in */*; do ls $i | wc; done
+  938  cd
+  939  cd work/tools/v3d_external
+  940  ls
+  941  bin/vaa3d
+  942  reset
+  943  bin/vaa3d
+  944  cd ..
+  945  cd vaa3d_tools/
+  946  ls
+  947  cd hackathon/
+  948  ls
+  949  cd yang
+  950  ls
+  951  cd terarepo/build
+  952  ls
+  953  cd data
+  954  ls
+  955  cd src
+  956  ls
+  957  du -sh conv2slice256
+  958  du -sh conv1slice256
+  959  ls
+  960  cd fmost-data/
+  961  ls
+  962  cd fMOST_raw_data/
+  963  ls
+  964  cd mouseID_314107-17300
+  965  ls
+  966  cde green/
+  967  cd green/
+  968  ls
+  969  du -sh montage
+  970  top
+  971  logout
+  972  which teraconverter
+  973  cp ~/tools/local/bin/teraconverter /data/mat/yang/
+  974  history
+  975  ls
+  976  cd tools/
+  977  ls
+  978  grep teraconverter histcmd.txt 
+  979  vim /data/mat/yang/cmd.txt
+  980  exit
+  981  ls
+  982  ls /local2
+  983  ls -lath
+  984  cd /local2
+  985  ls
+  986  ls -lath
+  987  ls IVSCC_mouse_inhibitory_tera/
+  988  ls IVSCC_mouse_inhibitory
+  989  ls IVSCC_mouse_inhibitory | wc
+  990  ls
+  991  cd IVSCC_mouse_inhibitory_tera/
+  992  ls
+  993  mkdir test
+  994  ls
+  995  rm -rf test
+  996  ls
+  997  cd ..
+  998  ls
+  999  ls IVSCC_mouse_inhibitory_tera/
+ 1000  ls IVSCC_mouse_inhibitory_tera/tera/
+ 1001  ls
+ 1002  cd /local2
+ 1003  ls
+ 1004  ls IVSCC_mouse_inhibitory_tera/
+ 1005  ls IVSCC_mouse_inhibitory_tera/tera/
+ 1006  ls /data/mat/yang
+ 1007  ls 
+ 1008  ls IVSCC_mouse_inhibitory
+ 1009  ls IVSCC_mouse_inhibitory/manual_SWC/
+ 1010  ls IVSCC_mouse_inhibitory/manual_SWC/ | wc
+ 1011  du -sh IVSCC_mouse_inhibitory/manual_SWC
+ 1012  cp -r IVSCC_mouse_inhibitory/manual_SWC /data/mat/yang/
+ 1013  ls
+ 1014  ls IVSCC_mouse_inhibitory_tera/
+ 1015  ls IVSCC_mouse_inhibitory_tera/397462955/
+ 1016  ls IVSCC_mouse_inhibitory_tera/397462955/tera
+ 1017  ls IVSCC_mouse_inhibitory_tera/tera/482592922/
+ 1018  df -h
+ 1019  ls
+ 1020  mkdir IVSCC_tera
+ 1021  ls
+ 1022  mkdir manualtraced
+ 1023  ls
+ 1024  ls IVSCC_mouse_inhibitory
+ 1025  ls
+ 1026  ls IVSCC_mouse_inhibitory_tera/
+ 1027  ls IVSCC_mouse_inhibitory_tera/328023827/
+ 1028  ls IVSCC_mouse_inhibitory_tera/334805190/
+ 1029  ls IVSCC_mouse_inhibitory_tera/397462955/
+ 1030  ls IVSCC_mouse_inhibitory_tera/397462955/teraFullTiff/
+ 1031  ls
+ 1032  cd IVSCC_mouse_inhibitory
+ 1033  ls
+ 1034  ls -lath
+ 1035  ls * | wc
+ 1036  for i in *; do ls $i | wc; done
+ 1037  for i in *; do echo $i; ls $i | wc; done
+ 1038  du -sh 476158176
+ 1039  cp -r 476158176 /data/mat/yang/
+ 1040  ls
+ 1041  ls -lath
+ 1042  ls -lath 567202239/
+ 1043  mkdir original
+ 1044  ls
+ 1045  cd ..
+ 1046  ls
+ 1047  ls-lath
+ 1048  ls -lath
+ 1049  ls -lath IVSCC_mouse_inhibitory >> log.txt
+ 1050  gedit log.txt 
+ 1051  cat log.txt 
+ 1052  ls -lath 
+ 1053  ls
+ 1054  ls IVSCC_mouse_inhibitory_tera/
+ 1055  ls log.txt 
+ 1056  cp log.txt /data/mat/yang
+ 1057  cp /data/mat/yang/log.txt ./
+ 1058  cat log.txt 
+ 1059  while read line; do str=($line); echo ${str[4]}; done < log.txt 
+ 1060  ls
+ 1061  chmod 777 IVSCC_tera
+ 1062  chmod 777 manualtraced
+ 1063  ls
+ 1064  cd IVSCC_mouse_inhibitory
+ 1065  ls
+ 1066  mkdir oridata
+ 1067  ls
+ 1068  chmod 777 oridata/
+ 1069  cd oridata/
+ 1070  while read line; do str=($line); echo ${str[4]}; done < ../../log.txt
+ 1071  while read line; do str=($line); ls /local2/IVSCC_mouse_inhibitory/${str[4]}; done < ../../log.txt
+ 1072  while read line; do str=($line); ln -s /local2/IVSCC_mouse_inhibitory/${str[4]} ./; done < ../../log.txt
+ 1073  ls
+ 1074  ls -lath 
+ 1075  ls
+ 1076  cd ..
+ 1077  ls
+ 1078  cp /data/mat/yang/vaa3d ./
+ 1079  ./vaa3d 
+ 1080  ldd vaa3d 
+ 1081  cp /data/mat/yang/libhdf5.so.101 ./
+ 1082  ldd vaa3d 
+ 1083  cp libhdf5.so.101 ~/tools/local/lib/
+ 1084  ldd vaa3d 
+ 1085  rm libhdf5.so.101 
+ 1086  ls
+ 1087  ./vaa3d 
+ 1088  ls /usr/lib64/libpng&
+ 1089  ls /usr/lib64/libpng*
+ 1090  cp -r /data/mat/yang/plugins/ ./
+ 1091  which gcc
+ 1092  gcc --version
+ 1093  ls
+ 1094  mkdir tools
+ 1095  cd tools/
+ 1096  ls
+ 1097  git clone https://github.com/Vaa3D/v3d_external.git
+ 1098  git clone git@github.com:Vaa3D/vaa3d_tools.git
+ 1099  ls
+ 1100  cd v3d_external/
+ 1101  ls
+ 1102  ln -s ../vaa3d_tools/released_plugins release_plugins_more
+ 1103  ls
+ 1104  ls -l
+ 1105  cd ..
+ 1106  ls
+ 1107  cd vaa3d_tools/
+ 1108  ls
+ 1109  ln -s ../v3d_external/bin 
+ 1110  ls
+ 1111  ln -s ../v3d_external/v3d_main 
+ 1112  ls
+ 1113  cd ..
+ 1114  ls
+ 1115  cd v3d_external/
+ 1116  ls
+ 1117  which qmake
+ 1118  qmake --version
+ 1119  which gcc
+ 1120  gcc --version
+ 1121  g++ --version
+ 1122  ls
+ 1123  ./build.linux -j16
+ 1124  git submodule init
+ 1125  git submodule update
+ 1126  ./build.linux -j16
+ 1127  ls
+ 1128  ls bin
+ 1129  ls ~/tools/local/lib/
+ 1130  ls ~/tools/local/lib/libpng12.so.0 
+ 1131  rm ~/tools/local/lib/libpng12.so.0 
+ 1132  pwd
+ 1133  cd .
+ 1134  cd ..
+ 1135  ls
+ 1136  cd ..
+ 1137  ls
+ 1138  rm vaa3d
+ 1139  rm -rf plugins/
+ 1140  cd bin
+ 1141  ls
+ 1142  ./vaa3d 
+ 1143  ldd ./vaa3d 
+ 1144  ls
+ 1145  cd ..
+ 1146  ls
+ 1147  cd IVSCC_mouse_inhibitory/oridata/
+ 1148  ls
+ 1149  for i in *; do echo $i; done
+ 1150  ls
+ 1151  time for i in *; do time /local2/bin/vaa3d -x IVSCC_import -f import -i $i -o ${i}".v3draw" -p 1 1; done
+ 1152  cd ..
+ 1153  ls
+ 1154  cd IVSCC_mouse_inhibitory_tera/
+ 1155  ls
+ 1156  ls *
+ 1157  ls
+ 1158  ls | wc
+ 1159  ls
+ 1160  mkdir old
+ 1161  ls */teraFullTiff
+ 1162  ls
+ 1163  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then echo $i; fi; done 
+ 1164  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then echo $i; else echo ${i}; fi; done 
+ 1165  rm -rf old
+ 1166  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then echo $i; else echo ${i}; fi; done 
+ 1167  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then ls ${i}"/teraFullTiff/RES*"; else echo ${i}; fi; done 
+ 1168  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then ls ${i}"/teraFullTiff/RES*/"; else echo ${i}; fi; done 
+ 1169  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then ls ${i}"/teraFullTiff"; else echo ${i}; fi; done 
+ 1170  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then ls ${i}"/teraFullTiff/RES*"; else echo ${i}; fi; done 
+ 1171  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then ls ${i}"/teraFullTiff"; else echo ${i}; fi; done 
+ 1172  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then echo ${i}"/teraFullTiff"; else echo ${i}; fi; done 
+ 1173  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then echo ${i}"/teraFullTiff" >> paths.txt; else echo ${i} >> paths.txt; fi; done 
+ 1174  ls
+ 1175  cat paths.txt 
+ 1176  while read line; do echo $line; done < paths.txt 
+ 1177  while read line; do ls $line; done < paths.txt 
+ 1178  while read line; do ls ${line}"/RES*"; done < paths.txt 
+ 1179  while read line; do for i in  ${line}"/RES*"; do echo $i; done done < paths.txt 
+ 1180  pwd
+ 1181  for i in /local2/IVSCC_mouse_inhibitory_tera/*; do if [ -d ${i}"/teraFullTiff" ]; then echo ${i}"/teraFullTiff" >> paths.txt; else echo ${i} >> paths.txt; fi; done 
+ 1182  cat paths.txt 
+ 1183  rm paths.txt 
+ 1184  for i in /local2/IVSCC_mouse_inhibitory_tera/*; do if [ -d ${i}"/teraFullTiff" ]; then echo ${i}"/teraFullTiff" >> paths.txt; else echo ${i} >> paths.txt; fi; done 
+ 1185  cat paths.txt 
+ 1186  while read line; do for i in  ${line}"/RES*"; do echo $i; done done < paths.txt 
+ 1187  cp /data/mat/yang/manual_SWC/* /local2/manualtraced/
+ 1188  ls /local2/manualtraced/
+ 1189  while read line; do for i in  ${line}"/RES*"; do echo $i; done done < paths.txt 
+ 1190  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo $i >> folderpaths.txt; done done < paths.txt 
+ 1191  cat folderpaths.txt 
+ 1192  rm folderpaths.txt 
+ 1193  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo "${i}" >> folderpaths.txt; done done < paths.txt 
+ 1194  cat folderpaths.txt 
+ 1195  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt; done done < paths.txt 
+ 1196  cat folderpaths.txt 
+ 1197  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt; echo "" >> folderpaths.txt; done done < paths.txt 
+ 1198  cat folderpaths.txt 
+ 1199  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt; echo "\n" >> folderpaths.txt; done done < paths.txt 
+ 1200  cat folderpaths.txt 
+ 1201  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt; echo "" >> folderpaths.txt;   done done < paths.txt 
+ 1202  cat folderpaths.txt 
+ 1203  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt;  done done < paths.txt 
+ 1204  cat folderpaths.txt 
+ 1205  rm folderpaths.txt 
+ 1206  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt;  done done < paths.txt 
+ 1207  cat folderpaths.txt 
+ 1208  while read line; do echo $line; done < folderpaths.txt 
+ 1209  rm folderpaths.txt 
+ 1210  while read line; do for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt;  done done < paths.txt 
+ 1211  while read line; do echo $line; done < folderpaths.txt 
+ 1212  while read line; do echo $line; done < paths.txt 
+ 1213  while read line; do echo ${line#*tera/*}; done < paths.txt 
+ 1214  while read line; do i=${line#*tera/*}; echo ${i%*/*}; done < paths.txt 
+ 1215  while read line; do j=${line#*tera/*};  for i in  ${line}"/RES*"; do echo ${i} >> ${j%*/*}".txt"; done done < paths.txt
+ 1216  ls
+ 1217  cat 328023827.txt
+ 1218  while read line; do str=($line); echo ${str[0]}; done < 328023827.txt
+ 1219  while read line; do str=($line); i=${str[0]}; echo ${i%*)*} done < 328023827.txt
+ 1220  while read line; do str=($line); i=${str[0]}; echo ${i%*)*}; done < 328023827.txt
+ 1221  while read line; do str=($line); i=${str[0]}; j=${i%*)*}; k=${j#*(*x*}; echo ${k#*x*};  done < 328023827.txt
+ 1222  while read line; do str=($line); i=${str[0]}; j=${i%*)*}; k=${j#*(*x*}; echo $k ${k#*x*};  done < 328023827.txt
+ 1223  while read line; do str=($line); i=${str[0]}; j=${i%*)*}; k=${j#*x*}; echo $k ${k#*x*};  done < 328023827.txt
+ 1224  while read line; do str=($line); i=${str[0]}; j=${i%*)*}; k=${j#*x*}; echo ${k#*x*};  done < 328023827.txt
+ 1225  ls
+ 1226  rm folderpaths.txt 
+ 1227  ls
+ 1228  mv paths.txt ../
+ 1229  ls
+ 1230  vim sortscales.sh
+ 1231  cat sortscales.sh 
+ 1232  for i in *.txt; do echo $i; done
+ 1233  for i in *.txt; do sh sortscales.sh $i ${i%*.txt}"_tobesorted.txt" ; done
+ 1234  ls
+ 1235  cat 328023827_tobesorted.txt 
+ 1236  gedit sortscales.sh 
+ 1237  vim sortscales.sh 
+ 1238  cat *_tobesort*
+ 1239  ls
+ 1240  ls *txt | wc
+ 1241  cp 560993823_tobesorted.txt test.txt
+ 1242  cat test.txt 
+ 1243  sort -n -k 1,1 test.txt
+ 1244  sort -n -k 2,1 test.txt
+ 1245  sort --help
+ 1246  sort -n -k 2 test.txt
+ 1247  sort -n -r -k 2 test.txt
+ 1248  rm test.txt 
+ 1249  for i in *_tobesort*; do echo $i; done
+ 1250  for i in *_tobesort*; do echo ${i%*_*}_sorted.txt; done
+ 1251  for i in *_tobesort*; do  echo $i; done
+ 1252  for i in *_tobesort*; do  sort -n -r -k 2 $i; done
+ 1253  ls
+ 1254  for i in *tobesort*; do echo $i; done
+ 1255  for i in *tobesort*; do echo $i;  while read line; do echo $line; done < $i;            done
+ 1256  for i in *tobesort*; do echo $i;  while read line; do n=0; echo $line; n=$((n+1)); echo $n;   done < $i;   done
+ 1257  for i in *tobesort*; do echo $i; n=0;  while read line; do  echo $line; n=$((n+1)); echo $n;   done < $i;   done
+ 1258* for i in *_sorted*; do  sort -n -r -k 2 $i >> ${i%*_*}_sorted.txt; done
+ 1259  ls
+ 1260  for i in *_sort*; do echo $i; n=0;  while read line; do  echo $line; n=$((n+1)); echo $n;   done < $i;   done
+ 1261  for i in *_sort*; do echo $i; n=0;  while read line; do  n=$((n+1)); if(( $n == 5 )); then echo $n; fi;   done < $i;   done
+ 1262  for i in *_sort*; do echo $i; n=0;  while read line; do  n=$((n+1)); if(( $n == 5 )); then echo $line; fi;   done < $i;   done
+ 1263  for i in *_sort*; do echo ${i%*_sort*}_ds5.tif; n=0;  while read line; do  n=$((n+1)); if(( $n == 5 )); then echo $line; fi;   done < $i;   done
+ 1264  ls
+ 1265  cat 478293723_sorted.txt
+ 1266  ls ../manualtraced
+ 1267  for i in *_sort*; do echo ${i%*_sort*}_ds4.tif; n=0;  while read line; do  n=$((n+1)); if(( $n == 5 )); then echo $line; fi;   done < $i;   done
+ 1268  cat 560993823.txt 
+ 1269  cat 560993823_tobesorted.txt 
+ 1270  for i in *_sort*; do echo ${i%*_sort*}_ds4.tif; n=0;  while read line; do  n=$((n+1)); if(( $n == 5 )); then time /local2/bin/vaa3d -x cropped3D -f teraflyCombine -i "$line" -o ${i%*_sort*}_ds4.tif; fi;   done < $i;   done
+ 1271  for i in *_sort*; do echo ${i%*_sort*}_ds4.tif; n=0;  while read line; do  n=$((n+1)); if(( $n == 5 )); then str=($line); time /local2/bin/vaa3d -x cropped3D -f teraflyCombine -i "${str[0]}" -o ${i%*_sort*}_ds4.tif; fi;   done < $i;   done
+ 1272  ls
+ 1273  cp *.tif /data/mat/yang/first25/
+ 1274  ls 476158176_sorted.txt
+ 1275  cat 476158176_sorted.txt
+ 1276  cat 476158176.txt
+ 1277  ls
+ 1278  vim sortscales.sh 
+ 1279  rm sortscales.sh 
+ 1280  vim sortscales.sh 
+ 1281  history >> histcmd.txt
+  456  ccmake ..
+  457  cd ..
+  458  rm -rf buildgpu/
+  459  cd ..
+  460  git diff
+  461  git add -u
+  462  git commit -m "add gpu branch"
+  463  git push
+  464  git diff
+  465  git add 3rdparty/culzwdecomp.cu 
+  466  git add 3rdparty/cudalzwdecompkernel.cuh 
+  467  git add -u
+  468  git commit -m "add cuda sources"
+  469  git push
+  470  git diff
+  471  git push
+  472  git pull
+  473  git diff
+  474  git add 3rdparty/culzwdecomp.cu 
+  475  git add 3rdparty/cudalzwdecompkernel.cuh 
+  476  git commit -m "add cuda sources"
+  477  ls
+  478  cd buildgpu
+  479  ls
+  480  make
+  481  which nvcc
+  482  make -j8
+  483  make
+  484  ccmake ..
+  485  make -j8
+  486  ccmake ..
+  487  make
+  488  cp ../src/main.cpp ../src/main.cu
+  489  ccmake ..
+  490  make
+  491  ls
+  492  ls src/BigTree 
+  493  ls
+  494  ls /local4/data/slice4/
+  495  time src/BigTree /local4/data/slice4 test 3
+  496  ls test
+  497  ls test/*
+  498  make -j8
+  499  rm -rf test
+  500  time src/BigTree /local4/data/slice4 test 3
+  501  ls test/*
+  502  make -j8
+  503  time src/BigTree /local4/data/slice4 test1 3
+  504  ln -s ~/fmost-data/fMOST_raw_data/mouseID_321237-17302/green/montage/test_05000_mon.tif ./
+  505  ls
+  506  ln -s ~/fmost-data/fMOST_raw_data/mouseID_321237-17302/green/montage/test_05500_mon.tif ./
+  507  ls /data/mat/yang/
+  508  ls /data/mat/cluster
+  509  ls ~/deploy.profile
+  510  find ~ deploy.profile
+  511  ls
+  512  tiffdump test_05500_mon_ds.tif
+  513  tiffdump test_05500_mon.tif
+  514  ls -lath
+  515  tiffcp --help
+  516  tiffcp -c lzw test_05500_mon_ds.tif imageslice_lzw.tif
+  517  ls -lath 
+  518  ifconfig
+  519  pwd
+  520  which nvcc
+  521  ldd ~/work/cuda/bin/nvcc
+  522  cd ..
+  523  ls
+  524  git clone https://github.com/funasaka/CUDA-LZWdecompression.git 
+  525  git clone https://github.com/funasaka/ALL.git
+  526  ls
+  527  cd CUDA-LZWdecompression/
+  528  ls
+  529  gedit Makefile 
+  530  cd src
+  531  ls
+  532  gedit Makefile 
+  533  nvcc --version
+  534  make
+  535  ls
+  536  ls ..
+  537  cd ..
+  538  ls
+  539  ldd libcld.so 
+  540  make
+  541  ls
+  542  ./sample 
+  543  ls
+  544  ls image/
+  545  ls -lath image/
+  546  gedit sample.cu
+  547  ls src
+  548  ls
+  549  make
+  550  ls
+  551  ./sample /local4/data/slice4/test_06550_mon.tif 
+  552  ./sample /local4/biconversion/mouse17304/test_00010_mon.tif 
+  553  ./sample /local4/biconversion/mouse17304/test_00020_mon.tif 
+  554  ./sample /local4/biconversion/mouse17304/test_05550_mon.tif 
+  555  ./sample /local4/biconversion/mouse17304/test_06550_mon.tif 
+  556  ls
+  557  gedit src/readtiff.h 
+  558  ls
+  559  make
+  560  ./sample /local4/biconversion/mouse17304/test_06550_mon.tif 
+  561  ./sample /local4/biconversion/mouse17304/test_06551_mon.tif 
+  562  ./sample /local4/biconversion/mouse17304/test_06552_mon.tif 
+  563  ./sample /local4/biconversion/mouse17304/test_07777_mon.tif 
+  564  which nail
+  565  ls ~/work/tools/nail/build/
+  566  ls ~/work/tools/nail/build/src
+  567  ls ~/work/tools/nail/build/src/nail
+  568  cat /etc/sysconfig/network-scripts/ifcfg-eth0
+  569  ifconfig
+  570  cat /etc/sysconfig/network-scripts/ifcfg-eth4
+  571  ls
+  572  history >> hiscmd.txt
+  573  tail hiscmd.txt 
+  574  gedit hiscmd.txt 
+  575  ls
+  576  make
+  577  nvcc -o sample sample.cu -O2 -L./ -lcld -ltiff
+  578  nvcc -o sample sample.cu -O2 -I/home/yangy/work/local/include -L./ -lcld -ltiff
+  579  ls
+  580  nvcc -o sample sample.cu -O2 -I/home/yangy/work/local/include -L./ -lcld -ltiff
+  581  time ./sample /local4/data/slice4/test_06550_mon.tif ./test_06550_raw.tif
+  582  ls
+  583  ls -lath
+  584  cd ..
+  585  git diff
+  586  gi
+  587  git add -u
+  588  git commit -m "update file organization"
+  589  git push
+  590  git diff
+  591  git log
+  592  git checkout master
+  593  gi
+  594  git log
+  595  git checkout gpu
+  596  git log
+  597  git diff
+  598  gi
+  599  git checkout GPU
+  600  git log
+  601  gi
+  602  ls
+  603  cd ..
+  604  cp -r BigTree/ bigtreegpu
+  605  cd BigTree/
+  606  gi
+  607  git pull
+  608  git diff
+  609  git pull
+  610  git log
+  611  git add -u
+  612  git commit -m "test"
+  613  git push
+  614  git diff
+  615  git pull
+  616  git branch --set-upstream-to=origin/GPU
+  617  git branch -b GPU
+  618  git checkout -b GPU
+  619  git diff
+  620  git push
+  621  git diff
+  622  git log
+  623  git diff
+  624  ls
+  625  git checkout GPU
+  626  gi
+  627  git push origin GPU
+  628  git branch
+  629  gi
+  630  git add -u
+  631  git commit -m "improved with GPU lzw decompression version 1.0"
+  632  git push
+  633  git diff
+  634  git add -u
+  635  git commit -m "cuda lzw compression only works for 8-bit grayscale images for now"
+  636  git push
+  637  git pull
+  638  git diff
+  639  cat /etc/network/interfaces
+  640  ls /etc/network/
+  641  ls /etc/
+  642  ls /etc/networks 
+  643  ls /etc/networks/
+  644  ls /etc/sysconfig/
+  645  ls /etc/sysconfig/networking
+  646  ls /etc/sysconfig/networking/devices/
+  647  ls /etc/sysconfig/networking/profiles/
+  648  ls /etc/sysconfig/networking/profiles/default/
+  649  ls /etc/sysconfig/network-scripts/
+  650  '
+  651  git pull
+  652  git checkout master
+  653  git pull
+  654  git checkout GPU
+  655  git pull
+  656  git diff
+  657  ls
+  658  cd
+  659  cd work/
+  660  ls
+  661  cd tools/
+  662  ls
+  663  ls ~/fmost-data/fMOST_raw_data/
+  664  ls ~/fmost-data/fMOST_raw_data/mouseID_321244-17545/green/montage/test_106*
+  665  ls ~/fmost-data/fMOST_raw_data/mouseID_321244-17545/green/montage/test_107*
+  666  ls ~/fmost-data/fMOST_raw_data/mouseID_321244-17545/green/montage/test_11*
+  667  ls ~/fmost-data/fMOST_raw_data/mouseID_321244-17545/green/montage/test_109*
+  668  ls ~/fmost-data/fMOST_raw_data/mouseID_321244-17545/green/montage/test_108*
+  669  top
+  670  pwd
+  671  cd
+  672  cd fmost-data/
+  673  ls
+  674  cd fMOST_terafly/
+  675  ls
+  676  ls mouseID17545/
+  677  ls
+  678  ls mouseID17545/
+  679  ls mouseID17545/*
+  680  ls mouseID17545/* | wc
+  681  ls /local4/biconversion/mouseID17545/RES\(54600x35989x10750\)/* | wc
+  682  du -sh /local4/biconversion/mouseID17545
+  683  cat /proc/mounts
+  684  findmnt
+  685  ssh fmost-data
+  686  cd
+  687  cd work/tools/v3d_external
+  688  bin/vaa3d
+  689  findmnt
+  690  ls /local3
+  691  df -h
+  692  umount /local3
+  693  sudo umount /local3
+  694  umount -h
+  695  sudo umount -f /local3
+  696  top
+  697  ls
+  698  sudo umount /local3
+  699  sudo umount -l /local3
+  700  sudo umount -f /local3
+  701  ls /local3
+  702  findmnt
+  703  ls
+  704  cd tools/
+  705  ls
+  706  cd imagecheck/
+  707  ls
+  708  more imagecheck.sh
+  709  nohup time sh imagecheck.sh ~/fmost-data/fMOST_raw_data/mouseID_362952-17304/green/montage images17304.txt &
+  710  top
+  711  ls
+  712  ls ..
+  713  ls ../v3d
+  714  ls ../v3d/green
+  715  cd
+  716  cd fmost-data/
+  717  ls
+  718  cd test_yang
+  719  ls
+  720  ls data
+  721  ls data/slice2556
+  722  ls data/slice256/
+  723  top
+  724  ifconfig
+  725  ping fmost-data
+  726  cat /etc/hosts
+  727  cat /etc/named.conf
+  728  cat /etc/resolv.conf
+  729  ping google.com
+  730  ping corp.alleninstitute.org
+  731  sudo ifup eth4
+  732  ifconfig
+  733  ifconfig[5~
+  734  ping 10.128.1.109
+  735  nmcli dev show
+  736  nm-tool | grep DNS
+  737  nslookup google.com
+  738  systemd-resolve --status
+  739  service named start
+  740  sudo service named start
+  741  sudo service named status
+  742  cat /etc/named.conf
+  743  ping google.com
+  744  ls /home/
+  745  ls
+  746  ls ~/.mozilla/
+  747  rm -rf ~/.mozilla/
+  748  ls ~/.ICEauthority
+  749  rm ~/.ICEauthority
+  750  ls ~/.ICEauthorit
+  751  rm ~/.ICEauthority
+  752  ls ~/.ICEauthority
+  753  touch ~/.ICEauthority
+  754  ls ~/.ICEauthority
+  755  cat ~/.ICEauthority
+  756  ls /etc/named.conf
+  757  ls /etc/named
+  758  logout
+  759  df -h
+  760  ifconfig
+  761  ping 10.192.1.109
+  762  ping 192.168.1.109
+  763  ls
+  764  pwd
+  765  ls
+  766  ls -lath /etc/sysconfig/network-scripts/
+  767  cat /etc/sysconfig/network-scripts/ifcfg-eth5
+  768  cat ~/.ICEauthority
+  769  diff .ICEauthority .ICEauthority_bk 
+  770  ifconfig
+  771  ping 192.168.1.109
+  772  sudo ifdown eth4
+  773  sudo ifup eth4
+  774  ping 192.168.1.101
+  775  ping 192.168.1.109
+  776  ping 192.168.1.108
+  777  cat /etc/sysconfig/network-scripts/ifcfg-eth4
+  778  ping 192.168.
+  779  ping 192.168.1.108
+  780  ifconfig
+  781  sudo ifup eth5
+  782  sudo cp /etc/sysconfig/network-scripts/ifcfg-eth4 /etc/sysconfig/network-scripts/ifcfg-eth0
+  783  sudo vim /etc/sysconfig/network-scripts/ifcfg-eth0
+  784  sudo ifup eth0
+  785  ifconfig
+  786  sudo ifdown eth0
+  787  ls
+  788  ifconfig
+  789  sudo rm /etc/sysconfig/network-scripts/ifcfg-eth0
+  790  ls /etc/sysconfig/network-scripts/
+  791  sudo ifdown eth5
+  792  sudo ifdown eth4
+  793  sudo ifup eth4
+  794  ping 192.168.1.108
+  795  df -h
+  796  sudo mount -t nfs 192.168.1.108:/public /local4
+  797  ls /local4
+  798  ls /local3
+  799  cd /local3
+  800  ls
+  801  ls maxconversion/
+  802  ls teraconverter2/
+  803  ls /local4
+  804  ls /local4/bk_ssd/
+  805  rm -rf teraconverter2/
+  806  sudo rm -rf teraconverter2/
+  807  ls
+  808  df -h
+  809  ls /local4/biconversion/mouseID17545/
+  810  nohup cp -r /local4/biconversion/mouseID17545/ maxconversion/ &
+  811  ls
+  812  ls maxconversion/
+  813  ls maxconversion/mouseID17545/
+  814  ls maxconversion/mouseID17545/RES\(54600x35989x10750\)/
+  815  date
+  816  ls maxconversion/mouseID17545/RES\(54600x35989x10750\)/
+  817  ls maxconversion/mouseID17545/RES\(54600x35989x10750\)/ | wc
+  818  su
+  819  history
+  820  logout
+  821  exit
+  822  su
+  823  history
+  824  exit
+  825  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/078080/078080_000000/078080_000000_-1.53155e+11.tif
+  826  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/078080/078080_072000/078080_072000_-1.53155e+11.tif
+  827  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/078080/078080_288000/078080_288000_-1.53155e+11.tif
+  828  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/078080/078080_216000/078080_216000_-1.53155e+11.tif
+  829  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/078080/078080_144000/078080_144000_-1.53155e+11.tif
+  830  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/312320/312320_144000/312320_144000_-1.53155e+11.tif
+  831  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/312320/312320_216000/312320_216000_-1.53155e+11.tif
+  832  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/312320/312320_288000/312320_288000_-1.53155e+11.tif
+  833  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/312320/312320_072000/312320_072000_-1.53155e+11.tif
+  834  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/312320/312320_000000/312320_000000_-1.53155e+11.tif
+  835  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/156160/156160_288000/156160_288000_-1.53155e+11.tif
+  836  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/156160/156160_216000/156160_216000_-1.53155e+11.tif
+  837  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/156160/156160_000000/156160_000000_-1.53155e+11.tif
+  838  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/156160/156160_072000/156160_072000_-1.53155e+11.tif
+  839  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/156160/156160_144000/156160_144000_-1.53155e+11.tif
+  840  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/468160/468160_288000/468160_288000_-1.53155e+11.tif
+  841  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/468160/468160_216000/468160_216000_-1.53155e+11.tif
+  842  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/468160/468160_072000/468160_072000_-1.53155e+11.tif
+  843  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/468160/468160_000000/468160_000000_-1.53155e+11.tif
+  844  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/468160/468160_144000/468160_144000_-1.53155e+11.tif
+  845  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/390400/390400_072000/390400_072000_-1.53155e+11.tif
+  846  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/390400/390400_288000/390400_288000_-1.53155e+11.tif
+  847  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/390400/390400_000000/390400_000000_-1.53155e+11.tif
+  848  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/390400/390400_144000/390400_144000_-1.53155e+11.tif
+  849  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/390400/390400_216000/390400_216000_-1.53155e+11.tif
+  850  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/000000/000000_216000/000000_216000_-1.53155e+11.tif
+  851  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/000000/000000_144000/000000_144000_-1.53155e+11.tif
+  852  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/000000/000000_288000/000000_288000_-1.53155e+11.tif
+  853  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/234240/234240_288000/234240_288000_-1.53155e+11.tif
+  854  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/234240/234240_144000/234240_144000_-1.53155e+11.tif
+  855  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/234240/234240_072000/234240_072000_-1.53155e+11.tif
+  856  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/234240/234240_216000/234240_216000_-1.53155e+11.tif
+  857  /local3/maxconversion/mouseID17545/RES(1706x1124x335)/234240/234240_000000/234240_000000_-1.53155e+11.tif
+  858  gedit questionalfiles.txt
+  859  while read line; do ls ~/fmost-data/fMOST_terafly$line; done
+  860  while read line; do echo ~/fmost-data/fMOST_terafly$line; done
+  861  while read line; do echo ~/fmost-data/fMOST_terafly$line; done < questionalfiles.txt 
+  862  while read line; do ls ~/fmost-data/fMOST_terafly$line; done < questionalfiles.txt 
+  863  while read line; do echo ~/fmost-data/fMOST_terafly$line; done < questionalfiles.txt 
+  864  while read line; do ls ~/fmost-data/fMOST_terafly$line; done < questionalfiles.txt 
+  865  while read line; do rm ~/fmost-data/fMOST_terafly$line; done < questionalfiles.txt 
+  866  while read line; do ls ~/fmost-data/fMOST_terafly$line; done < questionalfiles.txt 
+  867  rm -rf '/home/yangy/fmost-data/fMOST_terafly/mouseID_321244-17545' 
+  868  mv '/home/yangy/fmost-data/fMOST_terafly/mouseID17545' '/home/yangy/fmost-data/fMOST_terafly/mouseID_321244-17545' 
+  869  cd 
+  870  cd fmost-data 
+  871  ls
+  872  grep sshfs tools/histcmd.txt 
+  873  sudo sshfs -o allow_other yangy@fmost-data:/local2 /local2
+  874  ls
+  875  cd fmost-data/
+  876  ls
+  877  cd fMOST_terafly/
+  878  ls
+  879  du -sh mouseID17545/
+  880  ls mouseID17545/
+  881  ls mouseID17545/RES\(54600x35989x10750\)/
+  882  ls mouseID17545/RES\(54600x35989x10750\)/ | wc
+  883  su
+  884  ls mouseID17545/RES\(54600x35989x10750\)/ | wc
+  885  ls mouseID17545/
+  886  ls mouseID17545/RES\(54600x35989x10750\)
+  887  ls -lath mouseID17545/RES\(54600x35989x10750\)
+  888  ls -lath mouseID17545/RES\(54600x35989x10750\)/362400
+  889  ls -lath mouseID17545/
+  890  ls -lath 
+  891  ls -lath mouseID17545/
+  892  ls -lath mouseID17545/* | wc
+  893  for i in mouseID17545/*; do ls $i/ | wc ; done
+  894  for i in mouseID17545/*; do ls -lath $i ; done
+  895  cd 
+  896  cd /local4
+  897  ls
+  898  cd biconversion/
+  899  ls
+  900  cd mouseID17545/
+  901  ls
+  902  ls */* | wc
+  903  ls RES\(54600x35989x10750\)/ | wc
+  904  ls RES\(27300x17994x5375\)/ | wc
+  905  ls * | wc
+  906  ls
+  907  for i in *; do ls * | wc; done
+  908  for i in *; do ls $i | wc; done
+  909  cd
+  910  cd /local3
+  911  ls
+  912  cd maxconversion/
+  913  ls
+  914  ls mouseID17545/RES\(54600x35989x10750\)/ | wc
+  915  ls mouseID17545
+  916  ls mouseID17545/RES\(54600x35989x10750\)/ | wc
+  917  pwd
+  918  ls /local4/biconversion/mouseID17545/RES\(54600x35989x10750\)/ | wc
+  919  ls mouseID17545/RES\(54600x35989x10750\)/ | wc
+  920  ls mouseID17545/
+  921  ls mouseID17545/RES\(27300x17994x5375\)/ | wc
+  922  which lz4
+  923  ls mouseID17545/RES\(27300x17994x5375\)/ | wc
+  924  date
+  925  ls mouseID17545/RES\(27300x17994x5375\)/ | wc
+  926  date
+  927  ls mouseID17545/RES\(27300x17994x5375\)/ | wc
+  928  ls mouseID17545/
+  929  for i in *; do ls $i | wc; done
+  930  for i in *; do ls $i/* | wc; done
+  931  for i in */*; do ls $i | wc; done
+  932  top
+  933  ls
+  934  ls mouseID17545/
+  935  pwd
+  936  ls -lath
+  937  for i in */*; do ls $i | wc; done
+  938  cd
+  939  cd work/tools/v3d_external
+  940  ls
+  941  bin/vaa3d
+  942  reset
+  943  bin/vaa3d
+  944  cd ..
+  945  cd vaa3d_tools/
+  946  ls
+  947  cd hackathon/
+  948  ls
+  949  cd yang
+  950  ls
+  951  cd terarepo/build
+  952  ls
+  953  cd data
+  954  ls
+  955  cd src
+  956  ls
+  957  du -sh conv2slice256
+  958  du -sh conv1slice256
+  959  ls
+  960  cd fmost-data/
+  961  ls
+  962  cd fMOST_raw_data/
+  963  ls
+  964  cd mouseID_314107-17300
+  965  ls
+  966  cde green/
+  967  cd green/
+  968  ls
+  969  du -sh montage
+  970  top
+  971  logout
+  972  which teraconverter
+  973  cp ~/tools/local/bin/teraconverter /data/mat/yang/
+  974  history
+  975  ls
+  976  cd tools/
+  977  ls
+  978  grep teraconverter histcmd.txt 
+  979  vim /data/mat/yang/cmd.txt
+  980  exit
+  981  ls
+  982  ls /local2
+  983  ls -lath
+  984  cd /local2
+  985  ls
+  986  ls -lath
+  987  ls IVSCC_mouse_inhibitory_tera/
+  988  ls IVSCC_mouse_inhibitory
+  989  ls IVSCC_mouse_inhibitory | wc
+  990  ls
+  991  cd IVSCC_mouse_inhibitory_tera/
+  992  ls
+  993  mkdir test
+  994  ls
+  995  rm -rf test
+  996  ls
+  997  cd ..
+  998  ls
+  999  ls IVSCC_mouse_inhibitory_tera/
+ 1000  ls IVSCC_mouse_inhibitory_tera/tera/
+ 1001  ls
+ 1002  cd /local2
+ 1003  ls
+ 1004  ls IVSCC_mouse_inhibitory_tera/
+ 1005  ls IVSCC_mouse_inhibitory_tera/tera/
+ 1006  ls /data/mat/yang
+ 1007  ls 
+ 1008  ls IVSCC_mouse_inhibitory
+ 1009  ls IVSCC_mouse_inhibitory/manual_SWC/
+ 1010  ls IVSCC_mouse_inhibitory/manual_SWC/ | wc
+ 1011  du -sh IVSCC_mouse_inhibitory/manual_SWC
+ 1012  cp -r IVSCC_mouse_inhibitory/manual_SWC /data/mat/yang/
+ 1013  ls
+ 1014  ls IVSCC_mouse_inhibitory_tera/
+ 1015  ls IVSCC_mouse_inhibitory_tera/397462955/
+ 1016  ls IVSCC_mouse_inhibitory_tera/397462955/tera
+ 1017  ls IVSCC_mouse_inhibitory_tera/tera/482592922/
+ 1018  df -h
+ 1019  ls
+ 1020  mkdir IVSCC_tera
+ 1021  ls
+ 1022  mkdir manualtraced
+ 1023  ls
+ 1024  ls IVSCC_mouse_inhibitory
+ 1025  ls
+ 1026  ls IVSCC_mouse_inhibitory_tera/
+ 1027  ls IVSCC_mouse_inhibitory_tera/328023827/
+ 1028  ls IVSCC_mouse_inhibitory_tera/334805190/
+ 1029  ls IVSCC_mouse_inhibitory_tera/397462955/
+ 1030  ls IVSCC_mouse_inhibitory_tera/397462955/teraFullTiff/
+ 1031  ls
+ 1032  cd IVSCC_mouse_inhibitory
+ 1033  ls
+ 1034  ls -lath
+ 1035  ls * | wc
+ 1036  for i in *; do ls $i | wc; done
+ 1037  for i in *; do echo $i; ls $i | wc; done
+ 1038  du -sh 476158176
+ 1039  cp -r 476158176 /data/mat/yang/
+ 1040  ls
+ 1041  ls -lath
+ 1042  ls -lath 567202239/
+ 1043  mkdir original
+ 1044  ls
+ 1045  cd ..
+ 1046  ls
+ 1047  ls-lath
+ 1048  ls -lath
+ 1049  ls -lath IVSCC_mouse_inhibitory >> log.txt
+ 1050  gedit log.txt 
+ 1051  cat log.txt 
+ 1052  ls -lath 
+ 1053  ls
+ 1054  ls IVSCC_mouse_inhibitory_tera/
+ 1055  ls log.txt 
+ 1056  cp log.txt /data/mat/yang
+ 1057  cp /data/mat/yang/log.txt ./
+ 1058  cat log.txt 
+ 1059  while read line; do str=($line); echo ${str[4]}; done < log.txt 
+ 1060  ls
+ 1061  chmod 777 IVSCC_tera
+ 1062  chmod 777 manualtraced
+ 1063  ls
+ 1064  cd IVSCC_mouse_inhibitory
+ 1065  ls
+ 1066  mkdir oridata
+ 1067  ls
+ 1068  chmod 777 oridata/
+ 1069  cd oridata/
+ 1070  while read line; do str=($line); echo ${str[4]}; done < ../../log.txt
+ 1071  while read line; do str=($line); ls /local2/IVSCC_mouse_inhibitory/${str[4]}; done < ../../log.txt
+ 1072  while read line; do str=($line); ln -s /local2/IVSCC_mouse_inhibitory/${str[4]} ./; done < ../../log.txt
+ 1073  ls
+ 1074  ls -lath 
+ 1075  ls
+ 1076  cd ..
+ 1077  ls
+ 1078  cp /data/mat/yang/vaa3d ./
+ 1079  ./vaa3d 
+ 1080  ldd vaa3d 
+ 1081  cp /data/mat/yang/libhdf5.so.101 ./
+ 1082  ldd vaa3d 
+ 1083  cp libhdf5.so.101 ~/tools/local/lib/
+ 1084  ldd vaa3d 
+ 1085  rm libhdf5.so.101 
+ 1086  ls
+ 1087  ./vaa3d 
+ 1088  ls /usr/lib64/libpng&
+ 1089  ls /usr/lib64/libpng*
+ 1090  cp -r /data/mat/yang/plugins/ ./
+ 1091  which gcc
+ 1092  gcc --version
+ 1093  ls
+ 1094  mkdir tools
+ 1095  cd tools/
+ 1096  ls
+ 1097  git clone https://github.com/Vaa3D/v3d_external.git
+ 1098  git clone git@github.com:Vaa3D/vaa3d_tools.git
+ 1099  ls
+ 1100  cd v3d_external/
+ 1101  ls
+ 1102  ln -s ../vaa3d_tools/released_plugins release_plugins_more
+ 1103  ls
+ 1104  ls -l
+ 1105  cd ..
+ 1106  ls
+ 1107  cd vaa3d_tools/
+ 1108  ls
+ 1109  ln -s ../v3d_external/bin 
+ 1110  ls
+ 1111  ln -s ../v3d_external/v3d_main 
+ 1112  ls
+ 1113  cd ..
+ 1114  ls
+ 1115  cd v3d_external/
+ 1116  ls
+ 1117  which qmake
+ 1118  qmake --version
+ 1119  which gcc
+ 1120  gcc --version
+ 1121  g++ --version
+ 1122  ls
+ 1123  ./build.linux -j16
+ 1124  git submodule init
+ 1125  git submodule update
+ 1126  ./build.linux -j16
+ 1127  ls
+ 1128  ls bin
+ 1129  ls ~/tools/local/lib/
+ 1130  ls ~/tools/local/lib/libpng12.so.0 
+ 1131  rm ~/tools/local/lib/libpng12.so.0 
+ 1132  pwd
+ 1133  cd .
+ 1134  cd ..
+ 1135  ls
+ 1136  cd ..
+ 1137  ls
+ 1138  rm vaa3d
+ 1139  rm -rf plugins/
+ 1140  cd bin
+ 1141  ls
+ 1142  ./vaa3d 
+ 1143  ldd ./vaa3d 
+ 1144  ls
+ 1145  cd ..
+ 1146  ls
+ 1147  cd IVSCC_mouse_inhibitory/oridata/
+ 1148  ls
+ 1149  for i in *; do echo $i; done
+ 1150  ls
+ 1151  time for i in *; do time /local2/bin/vaa3d -x IVSCC_import -f import -i $i -o ${i}".v3draw" -p 1 1; done
+ 1152  cd ..
+ 1153  ls
+ 1154  cd IVSCC_mouse_inhibitory_tera/
+ 1155  ls
+ 1156  ls *
+ 1157  ls
+ 1158  ls | wc
+ 1159  ls
+ 1160  mkdir old
+ 1161  ls */teraFullTiff
+ 1162  ls
+ 1163  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then echo $i; fi; done 
+ 1164  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then echo $i; else echo ${i}; fi; done 
+ 1165  rm -rf old
+ 1166  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then echo $i; else echo ${i}; fi; done 
+ 1167  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then ls ${i}"/teraFullTiff/RES*"; else echo ${i}; fi; done 
+ 1168  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then ls ${i}"/teraFullTiff/RES*/"; else echo ${i}; fi; done 
+ 1169  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then ls ${i}"/teraFullTiff"; else echo ${i}; fi; done 
+ 1170  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then ls ${i}"/teraFullTiff/RES*"; else echo ${i}; fi; done 
+ 1171  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then ls ${i}"/teraFullTiff"; else echo ${i}; fi; done 
+ 1172  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then echo ${i}"/teraFullTiff"; else echo ${i}; fi; done 
+ 1173  for i in *; do if [ -d ${i}"/teraFullTiff" ]; then echo ${i}"/teraFullTiff" >> paths.txt; else echo ${i} >> paths.txt; fi; done 
+ 1174  ls
+ 1175  cat paths.txt 
+ 1176  while read line; do echo $line; done < paths.txt 
+ 1177  while read line; do ls $line; done < paths.txt 
+ 1178  while read line; do ls ${line}"/RES*"; done < paths.txt 
+ 1179  while read line; do for i in  ${line}"/RES*"; do echo $i; done done < paths.txt 
+ 1180  pwd
+ 1181  for i in /local2/IVSCC_mouse_inhibitory_tera/*; do if [ -d ${i}"/teraFullTiff" ]; then echo ${i}"/teraFullTiff" >> paths.txt; else echo ${i} >> paths.txt; fi; done 
+ 1182  cat paths.txt 
+ 1183  rm paths.txt 
+ 1184  for i in /local2/IVSCC_mouse_inhibitory_tera/*; do if [ -d ${i}"/teraFullTiff" ]; then echo ${i}"/teraFullTiff" >> paths.txt; else echo ${i} >> paths.txt; fi; done 
+ 1185  cat paths.txt 
+ 1186  while read line; do for i in  ${line}"/RES*"; do echo $i; done done < paths.txt 
+ 1187  cp /data/mat/yang/manual_SWC/* /local2/manualtraced/
+ 1188  ls /local2/manualtraced/
+ 1189  while read line; do for i in  ${line}"/RES*"; do echo $i; done done < paths.txt 
+ 1190  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo $i >> folderpaths.txt; done done < paths.txt 
+ 1191  cat folderpaths.txt 
+ 1192  rm folderpaths.txt 
+ 1193  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo "${i}" >> folderpaths.txt; done done < paths.txt 
+ 1194  cat folderpaths.txt 
+ 1195  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt; done done < paths.txt 
+ 1196  cat folderpaths.txt 
+ 1197  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt; echo "" >> folderpaths.txt; done done < paths.txt 
+ 1198  cat folderpaths.txt 
+ 1199  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt; echo "\n" >> folderpaths.txt; done done < paths.txt 
+ 1200  cat folderpaths.txt 
+ 1201  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt; echo "" >> folderpaths.txt;   done done < paths.txt 
+ 1202  cat folderpaths.txt 
+ 1203  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt;  done done < paths.txt 
+ 1204  cat folderpaths.txt 
+ 1205  rm folderpaths.txt 
+ 1206  while read line; do echo "" >> folderpaths.txt; for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt;  done done < paths.txt 
+ 1207  cat folderpaths.txt 
+ 1208  while read line; do echo $line; done < folderpaths.txt 
+ 1209  rm folderpaths.txt 
+ 1210  while read line; do for i in  ${line}"/RES*"; do echo ${i} >> folderpaths.txt;  done done < paths.txt 
+ 1211  while read line; do echo $line; done < folderpaths.txt 
+ 1212  while read line; do echo $line; done < paths.txt 
+ 1213  while read line; do echo ${line#*tera/*}; done < paths.txt 
+ 1214  while read line; do i=${line#*tera/*}; echo ${i%*/*}; done < paths.txt 
+ 1215  while read line; do j=${line#*tera/*};  for i in  ${line}"/RES*"; do echo ${i} >> ${j%*/*}".txt"; done done < paths.txt
+ 1216  ls
+ 1217  cat 328023827.txt
+ 1218  while read line; do str=($line); echo ${str[0]}; done < 328023827.txt
+ 1219  while read line; do str=($line); i=${str[0]}; echo ${i%*)*} done < 328023827.txt
+ 1220  while read line; do str=($line); i=${str[0]}; echo ${i%*)*}; done < 328023827.txt
+ 1221  while read line; do str=($line); i=${str[0]}; j=${i%*)*}; k=${j#*(*x*}; echo ${k#*x*};  done < 328023827.txt
+ 1222  while read line; do str=($line); i=${str[0]}; j=${i%*)*}; k=${j#*(*x*}; echo $k ${k#*x*};  done < 328023827.txt
+ 1223  while read line; do str=($line); i=${str[0]}; j=${i%*)*}; k=${j#*x*}; echo $k ${k#*x*};  done < 328023827.txt
+ 1224  while read line; do str=($line); i=${str[0]}; j=${i%*)*}; k=${j#*x*}; echo ${k#*x*};  done < 328023827.txt
+ 1225  ls
+ 1226  rm folderpaths.txt 
+ 1227  ls
+ 1228  mv paths.txt ../
+ 1229  ls
+ 1230  vim sortscales.sh
+ 1231  cat sortscales.sh 
+ 1232  for i in *.txt; do echo $i; done
+ 1233  for i in *.txt; do sh sortscales.sh $i ${i%*.txt}"_tobesorted.txt" ; done
+ 1234  ls
+ 1235  cat 328023827_tobesorted.txt 
+ 1236  gedit sortscales.sh 
+ 1237  vim sortscales.sh 
+ 1238  cat *_tobesort*
+ 1239  ls
+ 1240  ls *txt | wc
+ 1241  cp 560993823_tobesorted.txt test.txt
+ 1242  cat test.txt 
+ 1243  sort -n -k 1,1 test.txt
+ 1244  sort -n -k 2,1 test.txt
+ 1245  sort --help
+ 1246  sort -n -k 2 test.txt
+ 1247  sort -n -r -k 2 test.txt
+ 1248  rm test.txt 
+ 1249  for i in *_tobesort*; do echo $i; done
+ 1250  for i in *_tobesort*; do echo ${i%*_*}_sorted.txt; done
+ 1251  for i in *_tobesort*; do  echo $i; done
+ 1252  for i in *_tobesort*; do  sort -n -r -k 2 $i; done
+ 1253  ls
+ 1254  for i in *tobesort*; do echo $i; done
+ 1255  for i in *tobesort*; do echo $i;  while read line; do echo $line; done < $i;            done
+ 1256  for i in *tobesort*; do echo $i;  while read line; do n=0; echo $line; n=$((n+1)); echo $n;   done < $i;   done
+ 1257  for i in *tobesort*; do echo $i; n=0;  while read line; do  echo $line; n=$((n+1)); echo $n;   done < $i;   done
+ 1258* for i in *_sorted*; do  sort -n -r -k 2 $i >> ${i%*_*}_sorted.txt; done
+ 1259  ls
+ 1260  for i in *_sort*; do echo $i; n=0;  while read line; do  echo $line; n=$((n+1)); echo $n;   done < $i;   done
+ 1261  for i in *_sort*; do echo $i; n=0;  while read line; do  n=$((n+1)); if(( $n == 5 )); then echo $n; fi;   done < $i;   done
+ 1262  for i in *_sort*; do echo $i; n=0;  while read line; do  n=$((n+1)); if(( $n == 5 )); then echo $line; fi;   done < $i;   done
+ 1263  for i in *_sort*; do echo ${i%*_sort*}_ds5.tif; n=0;  while read line; do  n=$((n+1)); if(( $n == 5 )); then echo $line; fi;   done < $i;   done
+ 1264  ls
+ 1265  cat 478293723_sorted.txt
+ 1266  ls ../manualtraced
+ 1267  for i in *_sort*; do echo ${i%*_sort*}_ds4.tif; n=0;  while read line; do  n=$((n+1)); if(( $n == 5 )); then echo $line; fi;   done < $i;   done
+ 1268  cat 560993823.txt 
+ 1269  cat 560993823_tobesorted.txt 
+ 1270  for i in *_sort*; do echo ${i%*_sort*}_ds4.tif; n=0;  while read line; do  n=$((n+1)); if(( $n == 5 )); then time /local2/bin/vaa3d -x cropped3D -f teraflyCombine -i "$line" -o ${i%*_sort*}_ds4.tif; fi;   done < $i;   done
+ 1271  for i in *_sort*; do echo ${i%*_sort*}_ds4.tif; n=0;  while read line; do  n=$((n+1)); if(( $n == 5 )); then str=($line); time /local2/bin/vaa3d -x cropped3D -f teraflyCombine -i "${str[0]}" -o ${i%*_sort*}_ds4.tif; fi;   done < $i;   done
+ 1272  ls
+ 1273  cp *.tif /data/mat/yang/first25/
+ 1274  ls 476158176_sorted.txt
+ 1275  cat 476158176_sorted.txt
+ 1276  cat 476158176.txt
+ 1277  ls
+ 1278  vim sortscales.sh 
+ 1279  rm sortscales.sh 
+ 1280  vim sortscales.sh 
+ 1281  history >> histcmd.txt
+ 1282  grep sortscales.sh histcmd.txt 
+ 1283  ls
+ 1284  rm *.tif
+ 1285  ls
+ 1286  rm *_sor*
+ 1287  ls
+ 1288  rm *_tobe*
+ 1289  ls
+ 1290  for i in *.txt; do sh sortscales.sh $i ${i%*.txt}"_tobesorted.txt" ; done
+ 1291  ls
+ 1292  for i in *_tobe*; do cat $i; done
+ 1293  ls
+ 1294  rm histcmd_tobesorted.txt 
+ 1295  mv histcmd.txt ../
+ 1296  ls
+ 1297  reset
+ 1298  for i in *_tobe*; do cat $i; done
+ 1299  reset
+ 1300  for i in *_tobe*; do cat $i; echo ""; done
+ 1301  for i in *_tobesort*; do  sort -n -r -k 2 $i >> ${i%*_*}_sorted.txt; done
+ 1302  reset
+ 1303  for i in *_sort*; do  sort -n -r -k 2 $i >> ${i%*_*}_sorted.txt; done
+ 1304  ls
+ 1305  rm *_*
+ 1306  ls
+ 1307  for i in *.txt; do sh sortscales.sh $i ${i%*.txt}"_tobesorted.txt" ; done
+ 1308  for i in *_tobe*; do cat $i; echo ""; done
+ 1309  for i in *_tobesort*; do  sort -n -r -k 2 $i >> ${i%*_*}_sorted.txt; done
+ 1310  ls
+ 1311  for i in *_sort*; do cat $i; echo ""; done
+ 1312  ls
+ 1313  for i in *_sort*; do echo ${i%*_sort*}_ds4.tif; n=0;  while read line; do  n=$((n+1)); if(( $n == 5 )); then str=($line); time /local2/bin/vaa3d -x cropped3D -f teraflyCombine -i "${str[0]}" -o ${i%*_sort*}_ds4.tif; fi;   done < $i;   done
+ 1314  ls
+ 1315  ls -lath
+ 1316  ls
+ 1317  cp *.tif /data/mat/yang/first25/
+ 1318  cat 476158176_sorted.txt
+ 1319  cat 476158176_tobesorted.txt 
+ 1320  ls /local2/IVSCC_mouse_inhibitory_tera/476158176/teraFullTiff/RES(474x359x19) | wc
+ 1321  ls "/local2/IVSCC_mouse_inhibitory_tera/476158176/teraFullTiff/RES(474x359x19)" | wc
+ 1322  ls "/local2/IVSCC_mouse_inhibitory_tera/476158176/teraFullTiff/RES(237x179x9)" | wc
+ 1323  ls
+ 1324  cd ..
+ 1325  ls
+ 1326  cd IVSCC_mouse_inhibitory_tera
+ 1327  ls
+ 1328  cd ..
+ 1329  ls
+ 1330  cd IVSCC_mouse_inhibitory
+ 1331  ls
+ 1332  cd ..
+ 1333  ls
+ 1334  cd IVSCC_tera
+ 1335  ls
+ 1336  cd ..
+ 1337  ls
+ 1338  cd IVSCC_mouse_inhibitory
+ 1339  ls
+ 1340  cd oridata/
+ 1341  ls
+ 1342  mkdir firstpass
+ 1343  ls
+ 1344  mv *.v3draw firstpass/
+ 1345  ls
+ 1346  ls firstpass/ | wc
+ 1347  pwd
+ 1348  ls
+ 1349  pwd
+ 1350  ls /local2/IVSCC_tera
+ 1351  for i in firstpass/*.v3draw; do echo ${i%*.v3draw}; done
+ 1352  cd firstpass/
+ 1353  ls
+ 1354  for i in *; do echo ${i%*.v3draw}; done
+ 1355  for i in *; do echo /local2/IVSCC_tera/${i%*.v3draw}; done
+ 1356  for i in *; do mkdir /local2/IVSCC_tera/${i%*.v3draw}; done
+ 1357  ls /local2/IVSCC_tera
+ 1358  for i in *; do echo $i; done
+ 1359  for i in *; do ls $i; done
+ 1360  ls -l
+ 1361  ls -lh
+ 1362  cp 576572372.v3draw /data/mat/yang
+ 1363  reset
+ 1364  ls
+ 1365  vim convert.sh
+ 1366  cat convert.sh 
+ 1367  vim convert.sh 
+ 1368  cat convert.sh 
+ 1369  time sh convert.sh 
+ 1370  rm -rf /local2/IVSCC_tera/*
+ 1371  ls
+ 1372  vim convert.sh 
+ 1373  reset
+ 1374  ls
+ 1375  time sh convert.sh 
+ 1376  rm -rf /local2/IVSCC_tera/*
+ 1377  ls
+ 1378  ls *.v3draw | wc
+ 1379  mkdir first
+ 1380  mkdir second
+ 1381  mkdir third
+ 1382  mkdir fourth
+ 1383  mkdir fifth
+ 1384  mkdir sixth
+ 1385  mkdir seventh
+ 1386  mkdir eighth
+ 1387  mkdir nineth
+ 1388  mkdir tenth
+ 1389  ls
+ 1390  n=0; for i in *; do n=$((n+1)); if(( n < 13 )); then echo $i first/; elif(( n < 25 )); then echo $i second/; elif((n<37)); then echo $i third/; fi; done 
+ 1391  n=0; for i in *; do n=$((n+1)); if(( n < 13 )); then mv $i first/; elif(( n < 25 )); then mv $i second/; elif((n<37)); then mv $i third/; elif((n<49)); then mv $i fourth/; elif((n<61)); then mv $i fifth/; elif((n<73)); then mv $i sixth/; elif((n<85)); then mv $i seventh/; elif((n<97)); then mv $i eighth/; elif((n<108)); then mv $i nineth/; else mv $i tenth/;        fi; done 
+ 1392  ls
+ 1393  mv tenth/* ./
+ 1394  ls
+ 1395  mv *.v3draw tenth/
+ 1396  ls
+ 1397  ls */
+ 1398  ls
+ 1399  cp convert.sh */
+ 1400  ls first/
+ 1401  cat convert.sh 
+ 1402  cp convert.sh /data/mat/yang/test
+ 1403  ls
+ 1404  cd first/
+ 1405  nohup time sh ../convert.sh &
+ 1406  ls
+ 1407  more nohup.out 
+ 1408  top
+ 1409  cd ../second/
+ 1410  nohup time sh ../convert.sh >> log.txt &
+ 1411  ls
+ 1412  more log.txt 
+ 1413  top
+ 1414  ls
+ 1415  ls /local2/IVSCC_tera/
+ 1416  ls
+ 1417  cd ../third/
+ 1418  nohup time sh ../convert.sh &
+ 1419  cd ../fourth/
+ 1420  nohup time sh ../convert.sh &
+ 1421  cd ../fifth/
+ 1422  nohup time sh ../convert.sh &
+ 1423  cd ../sixth/
+ 1424  nohup time sh ../convert.sh &
+ 1425  cd ../seventh/
+ 1426  nohup time sh ../convert.sh &
+ 1427  cd ../eighth/
+ 1428  nohup time sh ../convert.sh &
+ 1429  cd ../nineth/
+ 1430  nohup time sh ../convert.sh &
+ 1431  c
+ 1432  cd ../tenth/
+ 1433  nohup time sh ../convert.sh &
+ 1434  ls
+ 1435  top
+ 1436  ls -lath
+ 1437  cd ..
+ 1438  ls
+ 1439  cd ..
+ 1440  ls
+ 1441  ls /local2/IVSCC_tera/
+ 1442  ls
+ 1443  cd ..
+ 1444  ls
+ 1445  ls -lath
+ 1446  ls oridata/
+ 1447  ls /local2/IVSCC_tera/
+ 1448  ls /local2/IVSCC_tera/*
+ 1449  ls oridata/
+ 1450  top
+ 1451  grep teraconverter | ps aux 
+ 1452  ps aux | grep teraconverter 
+ 1453  ls
+ 1454  ls ../histcmd.txt 
+ 1455  history >>  ../histcmd.txt 
