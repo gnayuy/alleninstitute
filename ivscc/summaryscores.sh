@@ -83,17 +83,17 @@ do
 if [[ $line =~ "bi-directional" ]]
 then
 
-score=${line#*=\ *}
+wscore=${line#*=\ *}
 
 elif [[ $line =~ "differen-structure-average" ]]
 then
 
-dscore=${line#*=\ *}
+wdscore=${line#*=\ *}
 
 elif [[ $line =~ "percent of different-structure (average)" ]]
 then
 
-dpscore=${line#*=\ *}
+wdpscore=${line#*=\ *}
 
 fi
 
@@ -104,7 +104,7 @@ fi
 
 if((n==2))
 then
-echo "$num, $score, $dscore, $dpscore, $ascore, $adscore, $adpscore, $dscore, $ddscore, $ddpscore"
+echo "$num, $wscore, $wdscore, $wdpscore, $ascore, $adscore, $adpscore, $dscore, $ddscore, $ddpscore"
 fi
 
 
