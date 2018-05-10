@@ -53,7 +53,7 @@ fi
 
 done < $file
 
-result=$(echo "$score < 2" | bc)
+result=$(echo "$score < 2 && $score > 0" | bc)
 
 if (( $result ))
 then
