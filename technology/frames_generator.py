@@ -31,5 +31,11 @@ data = list(f[a_group_key])
 n = len(data)
 m = int(n/factor)
 
+# enhance contrast
+clahe = cv2.createCLAHE(clipLimit = 3.0, tileGridSize=(8,8))
+
 for i in range(m):
-    cv2.imwrite(output + "/img-"+str(100000+i)+".tif", data[i*factor])
+    mat = np.array(data[i*factor])
+    cl = clahe.apply(mat)
+    tmp = uint8(255.0*cl/np.max(cl))
+    cv2.imwrite(output + "/img-"+str(100000+i)+".tif", tmp)
