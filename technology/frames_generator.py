@@ -37,5 +37,6 @@ clahe = cv2.createCLAHE(clipLimit = 3.0, tileGridSize=(8,8))
 for i in range(m):
     mat = np.array(data[i*factor])
     cl = clahe.apply(mat)
-    tmp = uint8(255.0*cl/np.max(cl))
+    tmp = 255.0*cl/np.max(cl)
+    tmp = tmp.astype('uint8')
     cv2.imwrite(output + "/img-"+str(100000+i)+".tif", tmp)
