@@ -12,6 +12,8 @@ outputswc = sys.argv[2]
 #
 inputneuron = pandas.read_csv(inputswc, delimiter=' ')
 
+print(inputneuron.shape)
+
 #
 inputneuron.iloc[:,2] = inputneuron.iloc[:,2]/64
 inputneuron.iloc[:,3] = inputneuron.iloc[:,3]/64
